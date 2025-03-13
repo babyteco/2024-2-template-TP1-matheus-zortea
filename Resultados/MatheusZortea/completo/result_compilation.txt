@@ -1,0 +1,83 @@
+data.c: In function ‘LeData’:
+data.c:28:15: warning: ‘d’ is used uninitialized [-Wuninitialized]
+   28 |     Data *d = InicializaData(d);
+      |               ^~~~~~~~~~~~~~~~~
+manutencao.c: In function ‘lerManutencao’:
+manutencao.c:49:5: warning: ‘nome’ is used uninitialized [-Wuninitialized]
+   49 |     scanf("%[^\n]\n", nome);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+manutencao.c:50:5: warning: ‘estado’ is used uninitialized [-Wuninitialized]
+   50 |     scanf("%[^\n]\n", estado);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+manutencao.c:51:5: warning: ‘local’ is used uninitialized [-Wuninitialized]
+   51 |     scanf("%[^\n]\n", local);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+outros.c:28:9: error: conflicting types for ‘criaOutros’; have ‘Outros *(char *, char *, int)’ {aka ‘struct Outros *(char *, char *, int)’}
+   28 | Outros *criaOutros(char *descricao, char *local, int nivel){
+      |         ^~~~~~~~~~
+In file included from outros.c:4:
+outros.h:20:9: note: previous declaration of ‘criaOutros’ with type ‘Outros *(char *, char *, int,  char *)’ {aka ‘struct Outros *(char *, char *, int,  char *)’}
+   20 | Outros *criaOutros(char *nome, char *categoria, int impacto, char *motivo);
+      |         ^~~~~~~~~~
+tecnico.c: In function ‘LeTecnico’:
+tecnico.c:41:15: warning: format ‘%[^
+   ’ expects argument of type ‘char *’, but argument 2 has type ‘char **’ [-Wformat=]
+   41 |     scanf("%[^\n]\n", &t->nome);
+      |            ~~~^~      ~~~~~~~~
+      |               |       |
+      |               char *  char **
+tecnico.c:42:15: warning: format ‘%[^
+   ’ expects argument of type ‘char *’, but argument 2 has type ‘char **’ [-Wformat=]
+   42 |     scanf("%[^\n]\n", &t->cpf);
+      |            ~~~^~      ~~~~~~~
+      |               |       |
+      |               char *  char **
+tecnico.c:44:15: warning: format ‘%[^
+   ’ expects argument of type ‘char *’, but argument 2 has type ‘char **’ [-Wformat=]
+   44 |     scanf("%[^\n]\n", &t->telefone);
+      |            ~~~^~      ~~~~~~~~~~~~
+      |               |       |
+      |               char *  char **
+tecnico.c:45:15: warning: format ‘%[^
+   ’ expects argument of type ‘char *’, but argument 2 has type ‘char **’ [-Wformat=]
+   45 |     scanf("%[^\n]\n", &t->genero);
+      |            ~~~^~      ~~~~~~~~~~
+      |               |       |
+      |               char *  char **
+tecnico.c:46:15: warning: format ‘%[^
+   ’ expects argument of type ‘char *’, but argument 2 has type ‘char **’ [-Wformat=]
+   46 |     scanf("%[^\n]\n", &t->atuacao);
+      |            ~~~^~      ~~~~~~~~~~~
+      |               |       |
+      |               char *  char **
+usuario.c: In function ‘LeUsuario’:
+usuario.c:39:15: warning: format ‘%[^
+   ’ expects argument of type ‘char *’, but argument 2 has type ‘char **’ [-Wformat=]
+   39 |     scanf("%[^\n]\n", &u->nome);
+      |            ~~~^~      ~~~~~~~~
+      |               |       |
+      |               char *  char **
+usuario.c:40:15: warning: format ‘%[^
+   ’ expects argument of type ‘char *’, but argument 2 has type ‘char **’ [-Wformat=]
+   40 |     scanf("%[^\n]\n", &u->cpf);
+      |            ~~~^~      ~~~~~~~
+      |               |       |
+      |               char *  char **
+usuario.c:42:15: warning: format ‘%[^
+   ’ expects argument of type ‘char *’, but argument 2 has type ‘char **’ [-Wformat=]
+   42 |     scanf("%[^\n]\n", &u->telefone);
+      |            ~~~^~      ~~~~~~~~~~~~
+      |               |       |
+      |               char *  char **
+usuario.c:43:15: warning: format ‘%[^
+   ’ expects argument of type ‘char *’, but argument 2 has type ‘char **’ [-Wformat=]
+   43 |     scanf("%[^\n]\n", &u->genero);
+      |            ~~~^~      ~~~~~~~~~~
+      |               |       |
+      |               char *  char **
+usuario.c:44:15: warning: format ‘%[^
+   ’ expects argument of type ‘char *’, but argument 2 has type ‘char **’ [-Wformat=]
+   44 |     scanf("%[^\n]\n", &u->setor);
+      |            ~~~^~      ~~~~~~~~~
+      |               |       |
+      |               char *  char **
