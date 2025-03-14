@@ -15,10 +15,10 @@
  * Estrutura de um Ticket Software contendo os parametros especificos de um ticket do tipo SOFTWARE
  */
 typedef struct Software{
-    char *nome;
-    char *categoria;
+    char nome[MAX_TAM_NOME_SOFTWARE];
+    char categoria[MAX_TAM_CAT];
     int impacto;
-    char *motivo;
+    char motivo[MAX_TAM_MOTIVO];
     int tempo;
 } Software;
 
@@ -35,9 +35,6 @@ typedef struct Software{
  */
 Software *criaSoftware(char *nome, char *categoria, int impacto, char *motivo){
     Software *s = (Software*) malloc(sizeof(Software));
-    s->nome = (char*) malloc(MAX_TAM_NOME_SOFTWARE * sizeof(char));
-    s->categoria = (char*) malloc(MAX_TAM_CAT * sizeof(char));
-    s->motivo = (char*) malloc(MAX_TAM_MOTIVO * sizeof(char));
     
     strcpy(s->nome, nome);
     strcpy(s->categoria, categoria);
@@ -107,9 +104,6 @@ char getTipoSoftware(){
  */
 void desalocaSoftware(void *s){
     Software *a = (Software*) s;
-    free(a->categoria); 
-    free(a->nome);
-    free(a->motivo);
     free(a);
 }
 
