@@ -1,6 +1,8 @@
 #ifndef _USUARIO
 #define _USUARIO
 
+#include "data.h"
+
 #define MAX_NOME 100
 #define MAX_CPF 14
 #define MAX_TEL 14
@@ -10,16 +12,16 @@
 
 typedef struct Usuario Usuario;
 
-/*
-Inicializa alocando os vetores e cria um usuário
-Retorna um ponteiro para o usuário inicializado
-*/
-Usuario *CriaUsuario();
+Usuario *CriaUsuario(char *nome, char *cpf, Data d, char *telefone, char *genero, char *setor);
 
-/*
-Le as informações do usuário da entrada padrão
-Retorna um ponteiro para o Usuario
-*/
 Usuario *LeUsuario();
+
+void desalocaUsuario(Usuario *u);
+
+int getTicketsSolicitados(Usuario *u);
+
+void AcrescentaTicketUsuario(Usuario *u);
+
+void notificaUsuario(Usuario *u);
 
 #endif
