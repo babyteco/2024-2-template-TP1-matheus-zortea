@@ -1,0 +1,90 @@
+==127979== Memcheck, a memory error detector
+==127979== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==127979== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==127979== Command: Resultados/MatheusZortea/main/prog Resultados/MatheusZortea/main/Casos/3
+==127979== Parent PID: 127978
+==127979== 
+==127979== Invalid write of size 8
+==127979==    at 0x109AB1: insereTecnicoLista (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127979==    by 0x109FE9: main (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127979==  Address 0x4aa75e0 is 0 bytes after a block of size 16 alloc'd
+==127979==    at 0x484DCD3: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==127979==    by 0x109A7D: insereTecnicoLista (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127979==    by 0x109FE9: main (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127979== 
+==127979== Invalid write of size 8
+==127979==    at 0x109D48: insereUsuarioLista (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127979==    by 0x10A012: main (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127979==  Address 0x4aa79f0 is 0 bytes after a block of size 16 alloc'd
+==127979==    at 0x484DCD3: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==127979==    by 0x109D14: insereUsuarioLista (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127979==    by 0x10A012: main (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127979== 
+==127979== Invalid read of size 8
+==127979==    at 0x109E30: comparaCPF (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127979==    by 0x1097C2: LeCadastraTicket (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127979==    by 0x10A02D: main (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127979==  Address 0x4aa79f0 is 0 bytes after a block of size 16 alloc'd
+==127979==    at 0x484DCD3: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==127979==    by 0x109D14: insereUsuarioLista (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127979==    by 0x10A012: main (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127979== 
+==127979== Invalid read of size 8
+==127979==    at 0x109E30: comparaCPF (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127979==    by 0x10971F: LeCadastraTicket (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127979==    by 0x10A02D: main (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127979==  Address 0x4aa79f0 is 0 bytes after a block of size 16 alloc'd
+==127979==    at 0x484DCD3: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==127979==    by 0x109D14: insereUsuarioLista (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127979==    by 0x10A012: main (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127979== 
+==127979== Invalid read of size 8
+==127979==    at 0x109E30: comparaCPF (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127979==    by 0x109865: LeCadastraTicket (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127979==    by 0x10A02D: main (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127979==  Address 0x4aa79f0 is 0 bytes after a block of size 16 alloc'd
+==127979==    at 0x484DCD3: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==127979==    by 0x109D14: insereUsuarioLista (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127979==    by 0x10A012: main (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127979== 
+==127979== 
+==127979== HEAP SUMMARY:
+==127979==     in use at exit: 1,340 bytes in 19 blocks
+==127979==   total heap usage: 28 allocs, 9 frees, 11,572 bytes allocated
+==127979== 
+==127979== 16 bytes in 1 blocks are definitely lost in loss record 3 of 11
+==127979==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==127979==    by 0x109400: criaFila (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127979==    by 0x109F9C: main (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127979== 
+==127979== 180 (168 direct, 12 indirect) bytes in 1 blocks are definitely lost in loss record 6 of 11
+==127979==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==127979==    by 0x10A908: CriaTecnico (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127979==    by 0x10AAFA: LeTecnico (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127979==    by 0x109FD2: main (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127979== 
+==127979== 360 (336 direct, 24 indirect) bytes in 2 blocks are definitely lost in loss record 9 of 11
+==127979==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==127979==    by 0x10AF5F: CriaUsuario (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127979==    by 0x10B0EC: LeUsuario (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127979==    by 0x109FFB: main (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127979== 
+==127979== 392 (16 direct, 376 indirect) bytes in 1 blocks are definitely lost in loss record 10 of 11
+==127979==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==127979==    by 0x109A0F: criaListaTecnicos (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127979==    by 0x109F80: main (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127979== 
+==127979== 392 (16 direct, 376 indirect) bytes in 1 blocks are definitely lost in loss record 11 of 11
+==127979==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==127979==    by 0x109CA9: criaListaUsuarios (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127979==    by 0x109F8E: main (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127979== 
+==127979== LEAK SUMMARY:
+==127979==    definitely lost: 552 bytes in 6 blocks
+==127979==    indirectly lost: 788 bytes in 13 blocks
+==127979==      possibly lost: 0 bytes in 0 blocks
+==127979==    still reachable: 0 bytes in 0 blocks
+==127979==         suppressed: 0 bytes in 0 blocks
+==127979== 
+==127979== For lists of detected and suppressed errors, rerun with: -s
+==127979== ERROR SUMMARY: 18 errors from 10 contexts (suppressed: 0 from 0)

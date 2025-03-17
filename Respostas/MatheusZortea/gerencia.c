@@ -18,7 +18,7 @@
 
 
 
-Ticket *LeCadastraTicket(Fila *f, ListaUsuarios *lu){
+void *LeCadastraTicket(Fila *f, ListaUsuarios *lu){
     char cpf[MAX_TAM_CPF];
     char tipo[MAX_TAM_TIPO];
 
@@ -60,39 +60,40 @@ Ticket *LeCadastraTicket(Fila *f, ListaUsuarios *lu){
             desalocaSoftware(s);
         } 
     } 
-        
 }
 
 
-void RealizaAcao(){
+void RealizaAcao(Fila *f){
     char acao[MAX_TAM_ACAO];
     scanf("%[^\n]\n", acao);
 
-    if (acao == "DISTRIBUI") {
+    if (strcmp(acao, "DISTRIBUI") == 0) {
         /* code */
     } 
 
-    if (acao == "NOTIFICA") {
+    if (strcmp(acao, "NOTIFICA") == 0) {
+        printf("----- FILA DE TICKETS -----\n");
+        notificaFila(f);
+        printf("\n---------------------------\n");
+    }
+    
+    if (strcmp(acao, "USUARIOS") == 0) {
         /* code */
     }
     
-    if (acao == "USUARIOS") {
-        /* code */
-    }
-    
-    if (acao == "TECNICOS"){
+    if (strcmp(acao, "TECNICOS") == 0){
         /* code */
     }
 
-    if (acao == "RANKING TECNICOS") {
+    if (strcmp(acao, "RANKING TECNICOS") == 0) {
         /* code */
     }
     
-    if (acao == "RANKING USUARIOS") {
+    if (strcmp(acao, "RANKING USUARIOS") == 0) {
         /* code */
     }
     
-    if (acao == "RELATORIO") {
+    if (strcmp(acao, "RELATORIO") == 0) {
         /* code */
     }
     

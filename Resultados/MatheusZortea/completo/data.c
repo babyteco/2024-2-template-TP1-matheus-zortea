@@ -25,7 +25,7 @@ Cria e le uma data
 Retorna um ponteiro para data
 */
 Data* LeData(){
-    Data *d = InicializaData(d);
+    Data *d = InicializaData();
     scanf("%d/%d/%d\n",&d->dia, &d->mes, &d->ano);
     return d;
 }

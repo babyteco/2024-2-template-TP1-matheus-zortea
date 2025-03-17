@@ -45,13 +45,7 @@ int getQtdUsuariosCadastrados(ListaUsuarios *lu){
 }
 
 
-/**
- * @brief Recupera um ticket na fila de processamento. Um ticket deve ser recuperado sempre na i-ésima posição.
- * @param f  Fila que contém o ticket
- * @param i  Posição do ticket na fila
- * @return  Ticket recuperado da fila
- */
-Ticket *getUsuarioNaLista(ListaUsuarios *lu, int i){
+Usuario *getUsuarioNaLista(ListaUsuarios *lu, int i){
     return lu->u[i];
 }
 

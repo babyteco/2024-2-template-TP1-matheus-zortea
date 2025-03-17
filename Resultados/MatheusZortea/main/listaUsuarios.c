@@ -45,22 +45,24 @@ int getQtdUsuariosCadastrados(ListaUsuarios *lu){
 }
 
 
-/**
- * @brief Recupera um ticket na fila de processamento. Um ticket deve ser recuperado sempre na i-ésima posição.
- * @param f  Fila que contém o ticket
- * @param i  Posição do ticket na fila
- * @return  Ticket recuperado da fila
- */
-Ticket *getUsuarioNaLista(ListaUsuarios *lu, int i){
+Usuario *getUsuarioNaLista(ListaUsuarios *lu, int i){
     return lu->u[i];
 }
 
-void ContabilizaTicketUsuario(ListaUsuarios *lu, char* cpf){
+//retorna o indice do usuario na lista se ele existir, 0 caso contrario
+int comparaCPF(ListaUsuarios *lu, char *cpf){
     for (int i = 0; i < lu->qtdUsuarios; i++){
         if (strcmp(getCpfUsuario(lu->u[i]), cpf) == 0){
-            AcrescentaTicketUsuario(lu->u[i]);
-            break;
+            return i;
         }
+    }
+    return 0;
+}
+
+void ContabilizaTicketUsuario(ListaUsuarios *lu, char* cpf){
+    int flag = comparaCPF(lu, cpf);
+    if (flag != 0){
+        AcrescentaTicketUsuario(lu->u[flag]);    
     }
 }
 

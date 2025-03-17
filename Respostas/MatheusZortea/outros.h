@@ -17,7 +17,7 @@ typedef struct Outros Outros;
  * @param motivo Motivo da abertura do ticket
  * @return  Uma estrutura Outros inicializada.
  */
-Outros *criaOutros(char *nome, char *categoria, int impacto, char *motivo);
+Outros *criaOutros(char *descricao, char *local, int nivel);
 
 /**
  * @brief Lê da entrada padrão um  ticket do TIPO Outros

@@ -11,12 +11,13 @@
 #include "fila.h"
 #include "listaTecnicos.h"
 #include "listaUsuarios.h"
+#include "gerencia.h"
 
 
 int main(){
 
-    ListaTecnicos *lt = CriaListaTecnicos();
-    ListaUsuarios *lu = CriaListasUsarios();
+    ListaTecnicos *lt = criaListaTecnicos();
+    ListaUsuarios *lu = criaListaUsuarios();
     Fila *f = criaFila();
 
     char operacao;
@@ -39,8 +40,7 @@ int main(){
         }
 
         if (operacao == 'E') {
-           char acao[MAX_TAM_ACAO];
-           scanf("%[^\n]\n", acao);
+            RealizaAcao(f);
         }
         
         scanf("%c\n", &operacao);

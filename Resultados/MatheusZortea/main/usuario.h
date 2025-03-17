@@ -12,7 +12,7 @@
 
 typedef struct Usuario Usuario;
 
-Usuario *CriaUsuario(char *nome, char *cpf, Data d, char *telefone, char *genero, char *setor);
+Usuario *CriaUsuario(char *nome, char *cpf, Data *d, char *telefone, char *genero, char *setor);
 
 Usuario *LeUsuario();
 

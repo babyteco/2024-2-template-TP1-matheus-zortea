@@ -11,52 +11,38 @@
 #include "fila.h"
 #include "listaTecnicos.h"
 #include "listaUsuarios.h"
+#include "gerencia.h"
+
 
 int main(){
 
-    ListaTecnicos *lt = CriaListaTecnicos();
-    ListaUsuarios *lu = CriaListasUsarios();
+    ListaTecnicos *lt = criaListaTecnicos();
+    ListaUsuarios *lu = criaListaUsuarios();
     Fila *f = criaFila();
 
     char operacao;
     scanf("%c\n", &operacao);
 
     while (operacao != 'F'){
-        if (operacao == "T") {
+        
+        if (operacao == 'T') {
             Tecnico *t = LeTecnico();
             insereTecnicoLista(lt, t);
         }
         
-        if (operacao == "U") {
+        if (operacao == 'U') {
             Usuario *u = LeUsuario();
             insereUsuarioLista(lu, u);
         }
         
-        /*if (operacao == "A") {
+        if (operacao == 'A') {
+            LeCadastraTicket(f, lu);
         }
-        /*
-        A (caractere indicando a abertura do ticket)
-        255.942.213-22 (CPF do usuário solicitante)
-        OUTROS (tipo do ticket)
-        RECOLHER COBRA QUE APARECEU NA ENTRADA DO PREDIO (descrição)
-        PASSARELA DE ENTRADA (local)
-        5 (dificuldade estimada pelo usuário)
+
+        if (operacao == 'E') {
+            RealizaAcao(f);
+        }
         
-        A (caractere indicando a abertura do ticket)
-        123.932.250-46 (CPF do usuário solicitante)
-        MANUTENCAO (tipo do ticket)
-        PORTA DE ENTRADA (nome do item)
-        RUIM (estado de conservação)
-        SALA 22 BLOCO B (localização)
-        
-        A (caractere indicando a abertura do ticket)
-        524.456.852-98 (CPF do usuário solicitante)
-        SOFTWARE (tipo do ticket)
-        EXCEL (nome do software)
-        DUVIDA (categoria da solicitação)
-        2 (impacto no trabalho)
-        NAO CONSIGO ORDENAR COLUNA DE DADOS (motivo da solicitação)
-    */
         scanf("%c\n", &operacao);
     }
     

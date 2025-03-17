@@ -17,7 +17,7 @@ void desalocaListaUsuarios(ListaUsuarios *lu);
 
 int getQtdUsuariosCadastrados(ListaUsuarios *lu);
 
-Ticket *getUsuarioNaLista(ListaUsuarios *lu, int i);
+Usuario *getUsuarioNaLista(ListaUsuarios *lu, int i);
 
 int comparaCPF(ListaUsuarios *lu, char *cpf);
 

@@ -19,6 +19,7 @@ ListaTecnicos *criaListaTecnicos(){
     lt->t = (Tecnico**) malloc(2 * sizeof(Tecnico*));
     lt->qtdTecnicos = 0;
     lt->capacidade = 2;
+    return lt;
 }
 
 

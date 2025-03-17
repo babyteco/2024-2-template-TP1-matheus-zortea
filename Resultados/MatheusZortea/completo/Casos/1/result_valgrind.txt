@@ -1,0 +1,63 @@
+==129613== Memcheck, a memory error detector
+==129613== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==129613== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==129613== Command: Resultados/MatheusZortea/completo/prog Resultados/MatheusZortea/completo/Casos/1
+==129613== Parent PID: 129612
+==129613== 
+==129613== Invalid write of size 8
+==129613==    at 0x109B4E: insereTecnicoLista (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==129613==    by 0x10A086: main (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==129613==  Address 0x4aa7630 is 0 bytes after a block of size 16 alloc'd
+==129613==    at 0x484DCD3: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==129613==    by 0x109B1A: insereTecnicoLista (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==129613==    by 0x10A086: main (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==129613== 
+==129613== Invalid write of size 8
+==129613==    at 0x109DE5: insereUsuarioLista (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==129613==    by 0x10A0AF: main (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==129613==  Address 0x4aa7a40 is 0 bytes after a block of size 16 alloc'd
+==129613==    at 0x484DCD3: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==129613==    by 0x109DB1: insereUsuarioLista (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==129613==    by 0x10A0AF: main (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==129613== 
+==129613== 
+==129613== HEAP SUMMARY:
+==129613==     in use at exit: 1,356 bytes in 20 blocks
+==129613==   total heap usage: 23 allocs, 3 frees, 5,484 bytes allocated
+==129613== 
+==129613== 32 (16 direct, 16 indirect) bytes in 1 blocks are definitely lost in loss record 4 of 12
+==129613==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==129613==    by 0x109420: criaFila (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==129613==    by 0x10A039: main (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==129613== 
+==129613== 180 (168 direct, 12 indirect) bytes in 1 blocks are definitely lost in loss record 7 of 12
+==129613==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==129613==    by 0x10A9E3: CriaTecnico (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==129613==    by 0x10ABD5: LeTecnico (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==129613==    by 0x10A06F: main (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==129613== 
+==129613== 360 (336 direct, 24 indirect) bytes in 2 blocks are definitely lost in loss record 10 of 12
+==129613==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==129613==    by 0x10B058: CriaUsuario (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==129613==    by 0x10B1E5: LeUsuario (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==129613==    by 0x10A098: main (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==129613== 
+==129613== 392 (16 direct, 376 indirect) bytes in 1 blocks are definitely lost in loss record 11 of 12
+==129613==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==129613==    by 0x109AAC: criaListaTecnicos (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==129613==    by 0x10A01D: main (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==129613== 
+==129613== 392 (16 direct, 376 indirect) bytes in 1 blocks are definitely lost in loss record 12 of 12
+==129613==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==129613==    by 0x109D46: criaListaUsuarios (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==129613==    by 0x10A02B: main (in /home/mgzortea/Downloads/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==129613== 
+==129613== LEAK SUMMARY:
+==129613==    definitely lost: 552 bytes in 6 blocks
+==129613==    indirectly lost: 804 bytes in 14 blocks
+==129613==      possibly lost: 0 bytes in 0 blocks
+==129613==    still reachable: 0 bytes in 0 blocks
+==129613==         suppressed: 0 bytes in 0 blocks
+==129613== 
+==129613== For lists of detected and suppressed errors, rerun with: -s
+==129613== ERROR SUMMARY: 8 errors from 7 contexts (suppressed: 0 from 0)
