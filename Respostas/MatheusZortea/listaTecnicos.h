@@ -10,7 +10,7 @@ typedef struct ListaTecnicos ListaTecnicos;
 
 ListaTecnicos *criaListaTecnicos();
 
-void insereUsuarioLista(ListaTecnicos *lt, char *nome, char *cpf, Data d, char *telefone, char *genero, char *atuacao, int salario, int dispTempo);
+void insereTecnicoLista(ListaTecnicos *lt, Tecnico *t);
 
 void desalocaListaTecnicos(ListaTecnicos *lt);
 

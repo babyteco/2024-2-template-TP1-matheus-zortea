@@ -11,7 +11,7 @@ typedef struct ListaUsuarios ListaUsuarios;
 
 ListaUsuarios *criaListaUsuarios();
 
-void insereUsuarioLista(ListaUsuarios *lu, char *nome, char *cpf, char *telefone, char *genero, char *setor, Data d);
+void insereUsuarioLista(ListaUsuarios *lu, Usuario *u);
 
 void desalocaListaUsuarios(ListaUsuarios *lu);
 

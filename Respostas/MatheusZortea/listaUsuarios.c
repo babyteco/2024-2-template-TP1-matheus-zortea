@@ -21,13 +21,13 @@ ListaUsuarios *criaListaUsuarios(){
 
 
 
-void insereUsuarioLista(ListaUsuarios *lu, char *nome, char *cpf, char *telefone, char *genero, char *setor, Data d){
+void insereUsuarioLista(ListaUsuarios *lu, Usuario *u){
     if (lu->capacidade == lu->qtdUsuarios){
         lu->u = (Usuario**) realloc(lu->u, 2 * sizeof(Usuario*));
         lu->capacidade += 2;
     }
     
-    lu->u[lu->qtdUsuarios] = criaUsuario(nome, cpf, d, telefone, genero, setor,)
+    lu->u[lu->qtdUsuarios] = u;
     
     lu->qtdUsuarios++;
 }

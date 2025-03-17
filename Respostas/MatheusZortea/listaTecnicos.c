@@ -22,13 +22,13 @@ ListaTecnicos *criaListaTecnicos(){
 
 
 
-void insereUsuarioLista(ListaTecnicos *lt, char *nome, char *cpf, Data d, char *telefone, char *genero, char *atuacao, int salario, int dispTempo){
+void insereTecnicoLista(ListaTecnicos *lt, Tecnico *t){
     if (lt->capacidade == lt->qtdTecnicos){
         lt->t = (Usuario**) realloc(lt->t, 2 * sizeof(Usuario*));
         lt->capacidade += 2;
     }
     
-    lt->t[lt->qtdTecnicos] = criaTecnico(nome, cpf, d, telefone, genero, atuacao, salario, dispTempo);
+    lt->t[lt->qtdTecnicos] = t;
 
     lt->qtdTecnicos++;
 }
