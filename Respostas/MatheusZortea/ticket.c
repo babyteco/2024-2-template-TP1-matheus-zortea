@@ -59,8 +59,8 @@ typedef char (*func_ptr_tipo)();
 Ticket *criaTicket(char *cpfSol, void *dado, func_ptr_tempoEstimado getTempo, func_ptr_tipo getTipo, func_ptr_notifica notifica, func_ptr_desaloca desaloca){
     Ticket *t = (Ticket*) malloc(sizeof(Ticket));
     strcpy(t->cpf, cpfSol);
-    t->status = "A";
-    t->ptrNotifica = getTempo;
+    t->status = 'A';
+    t->ptrNotifica = notifica;
     t->ptrDesaloca = desaloca;
     t->ptrGetTempo = getTempo;
     t->ptrGetTipo = getTipo;
@@ -82,7 +82,7 @@ void setIDTicket(Ticket *d, char *id){
  * @param t Ticket inicializado
  */
 void finalizaTicket(Ticket *t){
-    t->status = "F";
+    t->status = 'F';
 }
 
 /**
@@ -127,6 +127,7 @@ char getStatusTicket(Ticket *t){
  */
 void desalocaTicket(Ticket *doc){
     doc->ptrDesaloca(doc->ticket);
+    free(doc);
 }
 
 /**
@@ -134,5 +135,15 @@ void desalocaTicket(Ticket *doc){
  * @param doc Ticket a ser notificado
  */
 void notificaTicket(Ticket *doc){
+    printf("---------TICKET-----------\n");
+    printf("- ID: %s\n", doc->id);
+    printf("- Usuario solicitante: %s\n", doc->cpf);
     doc->ptrNotifica(doc->ticket);
+    if (doc->status == 'F'){
+        printf("- Status: Finalizado\n");
+    } else if (doc->status == 'A'){
+        printf("- Status: Aberto\n");
+    }
+    
+    printf("-------------------------\n");
 }

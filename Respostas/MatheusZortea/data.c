@@ -63,3 +63,7 @@ Imprime a data especificada
 void ImprimeData(Data *d){
     printf("%d/%d/%d\n", d->dia, d->mes, d->ano);
 }
+
+void DesalocaData(Data *d){
+    free(d);
+}

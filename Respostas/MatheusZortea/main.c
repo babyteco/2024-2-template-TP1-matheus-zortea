@@ -10,7 +10,7 @@
 #include "ticket.h"
 #include "fila.h"
 #include "listaTecnicos.h"
-#include "listaTecnicos.h"
+#include "listaUsuarios.h"
 
 
 int main(){
@@ -19,25 +19,30 @@ int main(){
     ListaUsuarios *lu = CriaListasUsarios();
     Fila *f = criaFila();
 
-    char opercao;
+    char operacao;
     scanf("%c\n", &operacao);
 
     while (operacao != 'F'){
-        if (operacao == "T") {
+        
+        if (operacao == 'T') {
             Tecnico *t = LeTecnico();
             insereTecnicoLista(lt, t);
         }
         
-        if (operacao == "U") {
-            Usuario *u = LeUsuario()
+        if (operacao == 'U') {
+            Usuario *u = LeUsuario();
             insereUsuarioLista(lu, u);
         }
         
-        if (operacao == "A") {
-            Ticket *t = 
+        if (operacao == 'A') {
+            LeCadastraTicket(f, lu);
+        }
+
+        if (operacao == 'E') {
+           char acao[MAX_TAM_ACAO];
+           scanf("%[^\n]\n", acao);
         }
         
-
         scanf("%c\n", &operacao);
     }
     

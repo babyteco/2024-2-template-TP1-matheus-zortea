@@ -13,7 +13,7 @@
 typedef struct Usuario{
     char nome[MAX_NOME];
     char cpf[MAX_CPF];
-    Data nascimento;
+    Data *nascimento;
     char telefone[MAX_TEL];
     char genero[MAX_GENERO];
     char setor[MAX_SETOR];
@@ -24,7 +24,7 @@ typedef struct Usuario{
 Inicializa alocando os vetores e cria um usuário
 Retorna um ponteiro para o usuário inicializado
 */
-Usuario *CriaUsuario(char *nome, char *cpf, Data d, char *telefone, char *genero, char *setor){
+Usuario *CriaUsuario(char *nome, char *cpf, Data *d, char *telefone, char *genero, char *setor){
     Usuario *u = (Usuario*) malloc(sizeof(Usuario));
     strcpy(u->nome, nome);
     strcpy(u->cpf, cpf);
@@ -43,7 +43,7 @@ Retorna um ponteiro para o Usuario
 Usuario *LeUsuario(){
     char nome[MAX_NOME];
     char cpf[MAX_CPF];
-    Data nascimento;
+    Data *nascimento;
     char telefone[MAX_TEL];
     char genero[MAX_GENERO];
     char setor[MAX_SETOR];
@@ -68,14 +68,19 @@ int getTicketsSolicitados(Usuario *u){
     return u->qtdTickets;
 }
 
+char *getCpfUsuario(Usuario *u){
+    return u->cpf;
+}
+
 void AcrescentaTicketUsuario(Usuario *u){
-    u->qtdtickets++;
+    u->qtdTickets++;
 }
 
 void notificaUsuario(Usuario *u){
     printf("- Nome: %s\n", u->nome);
     printf("- CPF: %s\n", u->cpf);
-    printf("- Data de Nascimento: %d/%d/%d\n", u->nascimento.dia, u->nascimento.mes, u->nascimento.ano);
+    printf("- Data de Nascimento: ");
+    ImprimeData(u->nascimento);
     printf("- Telefone: %s\n" , u->telefone);
     printf("- Genero: %s\n", u->genero);
     printf("- Setor: %s\n", u->setor);

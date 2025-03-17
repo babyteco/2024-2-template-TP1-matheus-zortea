@@ -28,4 +28,7 @@ Imprime a data especificada
 */
 void ImprimeData(Data *d);
 
+
+void DesalocaData(Data *d);
+
 #endif

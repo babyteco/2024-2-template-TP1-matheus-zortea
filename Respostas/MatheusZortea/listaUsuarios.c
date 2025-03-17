@@ -14,7 +14,7 @@ typedef struct ListaUsuarios{
 
 ListaUsuarios *criaListaUsuarios(){
     ListaUsuarios *lu = (ListaUsuarios*) malloc(sizeof(ListaUsuarios));
-    lu->u = (Usuarios**) malloc(2 * sizeof(Usuarios*));
+    lu->u = (Usuario**) malloc(2 * sizeof(Usuario*));
     lu->qtdUsuarios = 0;
     lu->capacidade = 2;
 }
@@ -36,7 +36,7 @@ void desalocaListaUsuarios(ListaUsuarios *lu){
     for (int i = 0; i < lu->qtdUsuarios; i++){
         desalocaUsuario(lu->u[i]);
     }
-    free(u);
+    free(lu->u);
     free(lu);
 }
 
@@ -55,12 +55,20 @@ Ticket *getUsuarioNaLista(ListaUsuarios *lu, int i){
     return lu->u[i];
 }
 
-void ContabilizaTicketUsuario(ListaUsuarios *lu, char* cpf){
+//retorna o indice do usuario na lista se ele existir, 0 caso contrario
+int comparaCPF(ListaUsuarios *lu, char *cpf){
     for (int i = 0; i < lu->qtdUsuarios; i++){
-        if (strcmp(lu->u[i]->cpf, cpf) == 0){
-            AcrescentaTicketUsuario(lu->u[i]);
-            break;
+        if (strcmp(getCpfUsuario(lu->u[i]), cpf) == 0){
+            return i;
         }
+    }
+    return 0;
+}
+
+void ContabilizaTicketUsuario(ListaUsuarios *lu, char* cpf){
+    int flag = comparaCPF(lu, cpf);
+    if (flag != 0){
+        AcrescentaTicketUsuario(lu->u[flag]);    
     }
 }
 

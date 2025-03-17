@@ -13,11 +13,11 @@
  * Estrutura de um Ticket Manutencao contendo os parametros especificos de um ticket do tipo SOFTWARE
  */
 typedef struct Manutencao{
-    char *nome;
-    char *estado;
-    char *local;
+    char nome[MAX_TAM_NOME_MANUTENCAO];
+    char estado[MAX_TAM_ESTADO];
+    char local[MAX_TAM_LOCAL];
     int tempo;
-    char *setor;
+    char setor[MAX_TAM_SETOR];
 } Manutencao;
 
 /**
@@ -30,10 +30,6 @@ typedef struct Manutencao{
  */
 Manutencao *criaManuencao(char *nome, char *estado, char *local){
     Manutencao *m = (Manutencao*) malloc(sizeof(Manutencao));
-    m->nome = (char*) malloc(MAX_TAM_NOME_MANUTENCAO * sizeof(char));
-    m->estado = (char*) malloc(MAX_TAM_ESTADO * sizeof(char));
-    m->local = (char*) malloc(MAX_TAM_LOCAL * sizeof(char));
-    m->setor = (char*) malloc(MAX_TAM_SETOR * sizeof(char));
     m->tempo = 0;
     return m;
 }
@@ -43,9 +39,9 @@ Manutencao *criaManuencao(char *nome, char *estado, char *local){
  * @return  Um chamado do Tipo Manutencao
  */
 Manutencao *lerManutencao(){
-    char *nome;
-    char *estado;
-    char *local;
+    char nome[MAX_TAM_NOME_MANUTENCAO];
+    char estado[MAX_TAM_ESTADO];
+    char local[MAX_TAM_LOCAL];
     scanf("%[^\n]\n", nome);
     scanf("%[^\n]\n", estado);
     scanf("%[^\n]\n", local);
@@ -114,10 +110,6 @@ char getTipoManutencao(){
  */
 void desalocaManutencao(void *dado){
     Manutencao *m = (Manutencao*) dado;
-    free(m->nome);
-    free(m->estado);
-    free(m->local);
-    free(m->setor);
     free(m);
 }
 

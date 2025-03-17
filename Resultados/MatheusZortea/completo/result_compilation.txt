@@ -2,16 +2,52 @@ data.c: In function ‘LeData’:
 data.c:28:15: warning: ‘d’ is used uninitialized [-Wuninitialized]
    28 |     Data *d = InicializaData(d);
       |               ^~~~~~~~~~~~~~~~~
-manutencao.c: In function ‘lerManutencao’:
-manutencao.c:49:5: warning: ‘nome’ is used uninitialized [-Wuninitialized]
-   49 |     scanf("%[^\n]\n", nome);
-      |     ^~~~~~~~~~~~~~~~~~~~~~~
-manutencao.c:50:5: warning: ‘estado’ is used uninitialized [-Wuninitialized]
-   50 |     scanf("%[^\n]\n", estado);
-      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
-manutencao.c:51:5: warning: ‘local’ is used uninitialized [-Wuninitialized]
-   51 |     scanf("%[^\n]\n", local);
-      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+gerencia.c: In function ‘ComecaLeitura’:
+gerencia.c:24:21: warning: variable ‘m’ set but not used [-Wunused-but-set-variable]
+   24 |         Manutencao *m;
+      |                     ^
+listaTecnicos.c: In function ‘desalocaListaTecnicos’:
+listaTecnicos.c:39:9: warning: implicit declaration of function ‘desalocaTecnico’; did you mean ‘desalocaListaTecnicos’? [-Wimplicit-function-declaration]
+   39 |         desalocaTecnico(lt->t[i]);
+      |         ^~~~~~~~~~~~~~~
+      |         desalocaListaTecnicos
+listaTecnicos.c: In function ‘criaListaTecnicos’:
+listaTecnicos.c:22:1: warning: control reaches end of non-void function [-Wreturn-type]
+   22 | }
+      | ^
+listaUsuarios.c: In function ‘getUsuarioNaLista’:
+listaUsuarios.c:55:17: warning: returning ‘Usuario *’ from a function with incompatible return type ‘Ticket *’ [-Wincompatible-pointer-types]
+   55 |     return lu->u[i];
+      |            ~~~~~^~~
+listaUsuarios.c: In function ‘criaListaUsuarios’:
+listaUsuarios.c:20:1: warning: control reaches end of non-void function [-Wreturn-type]
+   20 | }
+      | ^
+main.c: In function ‘main’:
+main.c:17:25: warning: implicit declaration of function ‘CriaListaTecnicos’; did you mean ‘criaListaTecnicos’? [-Wimplicit-function-declaration]
+   17 |     ListaTecnicos *lt = CriaListaTecnicos();
+      |                         ^~~~~~~~~~~~~~~~~
+      |                         criaListaTecnicos
+main.c:17:25: warning: initialization of ‘ListaTecnicos *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+main.c:18:25: warning: implicit declaration of function ‘CriaListasUsarios’; did you mean ‘criaListaUsuarios’? [-Wimplicit-function-declaration]
+   18 |     ListaUsuarios *lu = CriaListasUsarios();
+      |                         ^~~~~~~~~~~~~~~~~
+      |                         criaListaUsuarios
+main.c:18:25: warning: initialization of ‘ListaUsuarios *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+main.c:25:22: warning: comparison between pointer and integer
+   25 |         if (operacao == "T") {
+      |                      ^~
+main.c:25:22: warning: comparison with string literal results in unspecified behavior [-Waddress]
+main.c:30:22: warning: comparison between pointer and integer
+   30 |         if (operacao == "U") {
+      |                      ^~
+main.c:30:22: warning: comparison with string literal results in unspecified behavior [-Waddress]
+main.c:37:9: warning: "/*" within comment [-Wcomment]
+   37 |         /*
+      |          
+main.c:19:11: warning: unused variable ‘f’ [-Wunused-variable]
+   19 |     Fila *f = criaFila();
+      |           ^
 outros.c:28:9: error: conflicting types for ‘criaOutros’; have ‘Outros *(char *, char *, int)’ {aka ‘struct Outros *(char *, char *, int)’}
    28 | Outros *criaOutros(char *descricao, char *local, int nivel){
       |         ^~~~~~~~~~
@@ -19,65 +55,29 @@ In file included from outros.c:4:
 outros.h:20:9: note: previous declaration of ‘criaOutros’ with type ‘Outros *(char *, char *, int,  char *)’ {aka ‘struct Outros *(char *, char *, int,  char *)’}
    20 | Outros *criaOutros(char *nome, char *categoria, int impacto, char *motivo);
       |         ^~~~~~~~~~
-tecnico.c: In function ‘LeTecnico’:
-tecnico.c:41:15: warning: format ‘%[^
-   ’ expects argument of type ‘char *’, but argument 2 has type ‘char **’ [-Wformat=]
-   41 |     scanf("%[^\n]\n", &t->nome);
-      |            ~~~^~      ~~~~~~~~
-      |               |       |
-      |               char *  char **
-tecnico.c:42:15: warning: format ‘%[^
-   ’ expects argument of type ‘char *’, but argument 2 has type ‘char **’ [-Wformat=]
-   42 |     scanf("%[^\n]\n", &t->cpf);
-      |            ~~~^~      ~~~~~~~
-      |               |       |
-      |               char *  char **
-tecnico.c:44:15: warning: format ‘%[^
-   ’ expects argument of type ‘char *’, but argument 2 has type ‘char **’ [-Wformat=]
-   44 |     scanf("%[^\n]\n", &t->telefone);
-      |            ~~~^~      ~~~~~~~~~~~~
-      |               |       |
-      |               char *  char **
-tecnico.c:45:15: warning: format ‘%[^
-   ’ expects argument of type ‘char *’, but argument 2 has type ‘char **’ [-Wformat=]
-   45 |     scanf("%[^\n]\n", &t->genero);
-      |            ~~~^~      ~~~~~~~~~~
-      |               |       |
-      |               char *  char **
-tecnico.c:46:15: warning: format ‘%[^
-   ’ expects argument of type ‘char *’, but argument 2 has type ‘char **’ [-Wformat=]
-   46 |     scanf("%[^\n]\n", &t->atuacao);
-      |            ~~~^~      ~~~~~~~~~~~
-      |               |       |
-      |               char *  char **
-usuario.c: In function ‘LeUsuario’:
-usuario.c:39:15: warning: format ‘%[^
-   ’ expects argument of type ‘char *’, but argument 2 has type ‘char **’ [-Wformat=]
-   39 |     scanf("%[^\n]\n", &u->nome);
-      |            ~~~^~      ~~~~~~~~
-      |               |       |
-      |               char *  char **
-usuario.c:40:15: warning: format ‘%[^
-   ’ expects argument of type ‘char *’, but argument 2 has type ‘char **’ [-Wformat=]
-   40 |     scanf("%[^\n]\n", &u->cpf);
-      |            ~~~^~      ~~~~~~~
-      |               |       |
-      |               char *  char **
-usuario.c:42:15: warning: format ‘%[^
-   ’ expects argument of type ‘char *’, but argument 2 has type ‘char **’ [-Wformat=]
-   42 |     scanf("%[^\n]\n", &u->telefone);
-      |            ~~~^~      ~~~~~~~~~~~~
-      |               |       |
-      |               char *  char **
-usuario.c:43:15: warning: format ‘%[^
-   ’ expects argument of type ‘char *’, but argument 2 has type ‘char **’ [-Wformat=]
-   43 |     scanf("%[^\n]\n", &u->genero);
-      |            ~~~^~      ~~~~~~~~~~
-      |               |       |
-      |               char *  char **
-usuario.c:44:15: warning: format ‘%[^
-   ’ expects argument of type ‘char *’, but argument 2 has type ‘char **’ [-Wformat=]
-   44 |     scanf("%[^\n]\n", &u->setor);
-      |            ~~~^~      ~~~~~~~~~
-      |               |       |
-      |               char *  char **
+tecnico.c:28:10: error: conflicting types for ‘CriaTecnico’; have ‘Tecnico *(char *, char *, Data *, char *, char *, char *, int,  int)’ {aka ‘struct Tecnico *(char *, char *, Data *, char *, char *, char *, int,  int)’}
+   28 | Tecnico *CriaTecnico(char *nome, char *cpf, Data *d, char *telefone, char *genero, char *atuacao, int salario, int disptempo){
+      |          ^~~~~~~~~~~
+In file included from tecnico.c:3:
+tecnico.h:17:10: note: previous declaration of ‘CriaTecnico’ with type ‘Tecnico *(char *, char *, Data,  char *, char *, char *, int,  int)’ {aka ‘struct Tecnico *(char *, char *, Data,  char *, char *, char *, int,  int)’}
+   17 | Tecnico *CriaTecnico(char *nome, char *cpf, Data d, char *telefone, char *genero, char *atuacao, int salario, int disptempo);
+      |          ^~~~~~~~~~~
+tecnico.c: In function ‘CriaTecnico’:
+tecnico.c:30:5: warning: implicit declaration of function ‘strcpy’ [-Wimplicit-function-declaration]
+   30 |     strcpy(t->nome, nome);
+      |     ^~~~~~
+tecnico.c:4:1: note: include ‘<string.h>’ or provide a declaration of ‘strcpy’
+    3 | #include"tecnico.h"
+  +++ |+#include <string.h>
+    4 | #include"data.h"
+tecnico.c:30:5: warning: incompatible implicit declaration of built-in function ‘strcpy’ [-Wbuiltin-declaration-mismatch]
+   30 |     strcpy(t->nome, nome);
+      |     ^~~~~~
+tecnico.c:30:5: note: include ‘<string.h>’ or provide a declaration of ‘strcpy’
+usuario.c:27:10: error: conflicting types for ‘CriaUsuario’; have ‘Usuario *(char *, char *, Data *, char *, char *, char *)’ {aka ‘struct Usuario *(char *, char *, Data *, char *, char *, char *)’}
+   27 | Usuario *CriaUsuario(char *nome, char *cpf, Data *d, char *telefone, char *genero, char *setor){
+      |          ^~~~~~~~~~~
+In file included from usuario.c:4:
+usuario.h:15:10: note: previous declaration of ‘CriaUsuario’ with type ‘Usuario *(char *, char *, Data,  char *, char *, char *)’ {aka ‘struct Usuario *(char *, char *, Data,  char *, char *, char *)’}
+   15 | Usuario *CriaUsuario(char *nome, char *cpf, Data d, char *telefone, char *genero, char *setor);
+      |          ^~~~~~~~~~~

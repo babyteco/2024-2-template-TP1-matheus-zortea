@@ -9,10 +9,10 @@
 #define MAX_ATUACAO 5
 #define MAX_GENERO 9
 
-typedef struct Tenico{
+typedef struct Tecnico{
     char nome[MAX_NOME];
     char cpf[MAX_CPF];
-    Data nascimento;
+    Data *nascimento;
     char telefone[MAX_TEL];
     char genero[MAX_GENERO];
     char atuacao[MAX_ATUACAO];
@@ -25,14 +25,14 @@ typedef struct Tenico{
 Inicializa alocando os vetores e cria um usuário, inicializando os inteiros como -1
 Retorna um ponteiro para o usuário inicializado
 */
-Tecnico *CriaTecnico(char *nome, char *cpf, Data d, char *telefone, char *genero, char *atuacao, int salario, int disptempo){  
+Tecnico *CriaTecnico(char *nome, char *cpf, Data *d, char *telefone, char *genero, char *atuacao, int salario, int disptempo){  
     Tecnico *t = (Tecnico*) malloc(sizeof(Tecnico));
     strcpy(t->nome, nome);
     strcpy(t->cpf, cpf);
     strcpy(t->telefone , telefone);     
-    t->nascimento = t->nascimento;
-    strcpy(t->genero = genero);
-    strcpy(t->atuacao = atuacao);
+    t->nascimento = d;
+    strcpy(t->genero, genero);
+    strcpy(t->atuacao, atuacao);
     t->dispTempo = -1;
     t->salario = -1;
     t->tempoTrabalhado = 0;
@@ -46,7 +46,7 @@ Retorna um ponteiro para o Usuario
 Tecnico *LeTecnico(){
     char nome[MAX_NOME];
     char cpf[MAX_CPF];
-    Data nascimento;
+    Data *nascimento;
     char telefone[MAX_TEL];
     char genero[MAX_GENERO];
     char atuacao[MAX_ATUACAO];
@@ -66,6 +66,7 @@ Tecnico *LeTecnico(){
 }
 
 void desalocaTecnico(Tecnico *t){
+    DesalocaData(t->nascimento);
     free(t);
 }
 
@@ -89,7 +90,8 @@ void modificaHorasTecnico(Tecnico *t, int qtdHoras){
 void notificaTecnico(Tecnico *t){
     printf("- Nome: %s\n", t->nome);
     printf("- CPF: %s\n", t->cpf);
-    printf("- Data de Nascimento: %d/%d/%d\n", t->nascimento.dia, t->nascimento.mes, t->nascimento.ano);
+    printf("- Data de Nascimento: ");
+    ImprimeData(t->nascimento);
     printf("- Telefone: %s\n" , t->telefone);
     printf("- Genero: %s\n", t->genero);
     printf("- Area de Atuacao: %s\n", t->atuacao);

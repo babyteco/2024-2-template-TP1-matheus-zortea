@@ -20,6 +20,8 @@ void desalocaUsuario(Usuario *u);
 
 int getTicketsSolicitados(Usuario *u);
 
+char *getCpfUsuario(Usuario *u);
+
 void AcrescentaTicketUsuario(Usuario *u);
 
 void notificaUsuario(Usuario *u);

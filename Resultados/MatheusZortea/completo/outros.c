@@ -10,8 +10,8 @@
  * Estrutura de um Ticket Outros contendo os parametros especificos de um ticket do tipo Outros
  */
 typedef struct Outros{
-    char *descricao;
-    char *local;
+    char descricao[MAX_TAM_DESCRICAO];
+    char local[MAX_TAM_LOCAL];
     int nivel;
     int tempo;
 } Outros;
@@ -27,9 +27,7 @@ typedef struct Outros{
  */
 Outros *criaOutros(char *descricao, char *local, int nivel){
     Outros *o = (Outros*) malloc(sizeof(Outros));
-    o->descricao = (char*) malloc(MAX_TAM_DESCRICAO * sizeof(char));
-    o->local = (char*) malloc(MAX_TAM_LOCAL * sizeof(char));
-    
+
     strcpy(o->descricao, descricao);
     strcpy(o->local, local);
     o->nivel = nivel;
@@ -43,8 +41,8 @@ Outros *criaOutros(char *descricao, char *local, int nivel){
  * @return  Um chamado do Tipo Outros
  */
 Outros *lerOutros(){
-    char *descricao;
-    char *local;
+    char descricao[MAX_TAM_DESCRICAO];
+    char local[MAX_TAM_LOCAL];
     int nivel;
     scanf("%[^\n]\n", descricao);
     scanf("%[^\n]\n", local);
@@ -78,8 +76,6 @@ char getTipoOutros(){
  */
 void desalocaOutros(void *dado){
     Outros *o = (Outros*) dado;
-    free(o->descricao);
-    free(o->local);
     free(o);
 }
 

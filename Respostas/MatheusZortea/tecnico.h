@@ -1,5 +1,5 @@
-#ifndef _USUARIO
-#define _USUARIO
+#ifndef _TECNICO
+#define _TECNICO
 
 #include "data.h"
 
@@ -11,7 +11,7 @@
 #define MAX_GENERO 9
 
 
-typedef struct Tenico Tecnico;
+typedef struct Tecnico Tecnico;
 
 
 Tecnico *CriaTecnico(char *nome, char *cpf, Data d, char *telefone, char *genero, char *atuacao, int salario, int disptempo);
