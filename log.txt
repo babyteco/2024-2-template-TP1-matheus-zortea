@@ -132,17 +132,17 @@ LINKANDO OS ARQUIVOS COMPILADOS:
 EXECUTANDO O VALGRIND EM CADA CASO:
  - Pasta main / Caso 1:
  - Arquivo de output gerado: Resultados/MatheusZortea/main/Casos/1/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 22, frees: 3, errors: 8 | Desconto do valgrind 50.00%
+ - Valgrind: Incorreto! allocs: 27, frees: 4, errors: 9 | Desconto do valgrind 50.00%
  - Resultado para o saida.txt: Incorreto! Peso: 0.0
  - Nota para o Caso (soma dos pesos): 0 (soma total) - 50.0% (desconto do valgrind) = 0 de 10 pontos.
  - Pasta main / Caso 2:
  - Arquivo de output gerado: Resultados/MatheusZortea/main/Casos/2/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 23, frees: 4, errors: 10 | Desconto do valgrind 50.00%
+ - Valgrind: Incorreto! allocs: 28, frees: 5, errors: 13 | Desconto do valgrind 50.00%
  - Resultado para o saida.txt: Incorreto! Peso: 0.0
  - Nota para o Caso (soma dos pesos): 0 (soma total) - 50.0% (desconto do valgrind) = 0 de 10 pontos.
  - Pasta main / Caso 3:
  - Arquivo de output gerado: Resultados/MatheusZortea/main/Casos/3/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 28, frees: 9, errors: 18 | Desconto do valgrind 50.00%
+ - Valgrind: Incorreto! allocs: 32, frees: 9, errors: 29 | Desconto do valgrind 50.00%
  - Resultado para o saida.txt: Incorreto! Peso: 0.0
  - Nota para o Caso (soma dos pesos): 0 (soma total) - 50.0% (desconto do valgrind) = 0 de 10 pontos.
  - Pasta main / Caso 4:
@@ -174,17 +174,17 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  -----
  - Pasta completo / Caso 1:
  - Arquivo de output gerado: Resultados/MatheusZortea/completo/Casos/1/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 23, frees: 3, errors: 8 | Desconto do valgrind 50.00%
+ - Valgrind: Incorreto! allocs: 28, frees: 4, errors: 9 | Desconto do valgrind 50.00%
  - Resultado para o saida.txt: Incorreto! Peso: 0.0
  - Nota para o Caso (soma dos pesos): 0 (soma total) - 50.0% (desconto do valgrind) = 0 de 10 pontos.
  - Pasta completo / Caso 2:
  - Arquivo de output gerado: Resultados/MatheusZortea/completo/Casos/2/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 24, frees: 4, errors: 10 | Desconto do valgrind 50.00%
+ - Valgrind: Incorreto! allocs: 29, frees: 5, errors: 13 | Desconto do valgrind 50.00%
  - Resultado para o saida.txt: Incorreto! Peso: 0.0
  - Nota para o Caso (soma dos pesos): 0 (soma total) - 50.0% (desconto do valgrind) = 0 de 10 pontos.
  - Pasta completo / Caso 3:
  - Arquivo de output gerado: Resultados/MatheusZortea/completo/Casos/3/result_valgrind.txt.
- - Valgrind: Incorreto! allocs: 29, frees: 9, errors: 18 | Desconto do valgrind 50.00%
+ - Valgrind: Incorreto! allocs: 33, frees: 9, errors: 29 | Desconto do valgrind 50.00%
  - Resultado para o saida.txt: Incorreto! Peso: 0.0
  - Nota para o Caso (soma dos pesos): 0 (soma total) - 50.0% (desconto do valgrind) = 0 de 10 pontos.
  - Pasta completo / Caso 4:
@@ -222,39 +222,39 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Pasta fila / Caso 2:
  - Arquivo de output gerado: Resultados/MatheusZortea/fila/Casos/2/result_valgrind.txt.
  - Valgrind: Ok! allocs: 37, frees: 37, errors: 0 | Desconto do valgrind: 0.0%
- - Resultado para o saida.txt: Ok! Peso: 10
- - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
  - Pasta fila / Caso 3:
  - Arquivo de output gerado: Resultados/MatheusZortea/fila/Casos/3/result_valgrind.txt.
  - Valgrind: Ok! allocs: 58, frees: 58, errors: 0 | Desconto do valgrind: 0.0%
- - Resultado para o saida.txt: Ok! Peso: 10
- - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
  - Pasta fila / Caso 4:
  - Arquivo de output gerado: Resultados/MatheusZortea/fila/Casos/4/result_valgrind.txt.
  - Valgrind: Ok! allocs: 58, frees: 58, errors: 0 | Desconto do valgrind: 0.0%
- - Resultado para o saida.txt: Ok! Peso: 10
- - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
  - Pasta fila / Caso 5:
  - Arquivo de output gerado: Resultados/MatheusZortea/fila/Casos/5/result_valgrind.txt.
  - Valgrind: Ok! allocs: 64, frees: 64, errors: 0 | Desconto do valgrind: 0.0%
- - Resultado para o saida.txt: Ok! Peso: 10
- - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
  - Pasta fila / Caso 6:
  - Arquivo de output gerado: Resultados/MatheusZortea/fila/Casos/6/result_valgrind.txt.
  - Valgrind: Ok! allocs: 99, frees: 99, errors: 0 | Desconto do valgrind: 0.0%
- - Resultado para o saida.txt: Ok! Peso: 10
- - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
  - Pasta fila / Caso 7:
  - Arquivo de output gerado: Resultados/MatheusZortea/fila/Casos/7/result_valgrind.txt.
  - Valgrind: Ok! allocs: 66, frees: 66, errors: 0 | Desconto do valgrind: 0.0%
- - Resultado para o saida.txt: Ok! Peso: 10
- - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
  - Pasta fila / Caso 8:
  - Arquivo de output gerado: Resultados/MatheusZortea/fila/Casos/8/result_valgrind.txt.
  - Valgrind: Ok! allocs: 67, frees: 67, errors: 0 | Desconto do valgrind: 0.0%
- - Resultado para o saida.txt: Ok! Peso: 10
- - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
- - Nota para a pasta fila (máximo 1.00) - 80.00 de 80 - 100.00% de 1.00: 1.00.
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
+ - Nota para a pasta fila (máximo 1.00) - 10.00 de 80 - 12.00% de 1.00: .12.
  -----
  - Pasta ticket / Caso 1:
  - Arquivo de output gerado: Resultados/MatheusZortea/ticket/Casos/1/result_valgrind.txt.
@@ -264,39 +264,39 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Pasta ticket / Caso 2:
  - Arquivo de output gerado: Resultados/MatheusZortea/ticket/Casos/2/result_valgrind.txt.
  - Valgrind: Ok! allocs: 37, frees: 37, errors: 0 | Desconto do valgrind: 0.0%
- - Resultado para o saida.txt: Ok! Peso: 10
- - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
  - Pasta ticket / Caso 3:
  - Arquivo de output gerado: Resultados/MatheusZortea/ticket/Casos/3/result_valgrind.txt.
  - Valgrind: Ok! allocs: 60, frees: 60, errors: 0 | Desconto do valgrind: 0.0%
- - Resultado para o saida.txt: Ok! Peso: 10
- - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
  - Pasta ticket / Caso 4:
  - Arquivo de output gerado: Resultados/MatheusZortea/ticket/Casos/4/result_valgrind.txt.
  - Valgrind: Ok! allocs: 58, frees: 58, errors: 0 | Desconto do valgrind: 0.0%
- - Resultado para o saida.txt: Ok! Peso: 10
- - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
  - Pasta ticket / Caso 5:
  - Arquivo de output gerado: Resultados/MatheusZortea/ticket/Casos/5/result_valgrind.txt.
  - Valgrind: Ok! allocs: 66, frees: 66, errors: 0 | Desconto do valgrind: 0.0%
- - Resultado para o saida.txt: Ok! Peso: 10
- - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
  - Pasta ticket / Caso 6:
  - Arquivo de output gerado: Resultados/MatheusZortea/ticket/Casos/6/result_valgrind.txt.
  - Valgrind: Ok! allocs: 101, frees: 101, errors: 0 | Desconto do valgrind: 0.0%
- - Resultado para o saida.txt: Ok! Peso: 10
- - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
  - Pasta ticket / Caso 7:
  - Arquivo de output gerado: Resultados/MatheusZortea/ticket/Casos/7/result_valgrind.txt.
  - Valgrind: Ok! allocs: 68, frees: 68, errors: 0 | Desconto do valgrind: 0.0%
- - Resultado para o saida.txt: Ok! Peso: 10
- - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
  - Pasta ticket / Caso 8:
  - Arquivo de output gerado: Resultados/MatheusZortea/ticket/Casos/8/result_valgrind.txt.
  - Valgrind: Ok! allocs: 69, frees: 69, errors: 0 | Desconto do valgrind: 0.0%
- - Resultado para o saida.txt: Ok! Peso: 10
- - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
- - Nota para a pasta ticket (máximo 1.00) - 80.00 de 80 - 100.00% de 1.00: 1.00.
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
+ - Nota para a pasta ticket (máximo 1.00) - 10.00 de 80 - 12.00% de 1.00: .12.
  -----
  - Pasta software / Caso 1:
  - Arquivo de output gerado: Resultados/MatheusZortea/software/Casos/1/result_valgrind.txt.
@@ -359,19 +359,19 @@ Aluno: MatheusZortea
  - Valgrinds corretos: 5 de 8
  - Nota de MatheusZortea para o teste completo: 0
  - Teste fila
- - Resultados corretos: 8 de 8
+ - Resultados corretos: 1 de 8
  - Valgrinds corretos: 8 de 8
- - Nota de MatheusZortea para o teste fila: 1.00
+ - Nota de MatheusZortea para o teste fila: .12
  - Teste ticket
- - Resultados corretos: 8 de 8
+ - Resultados corretos: 1 de 8
  - Valgrinds corretos: 8 de 8
- - Nota de MatheusZortea para o teste ticket: 1.00
+ - Nota de MatheusZortea para o teste ticket: .12
  - Teste software
  - Resultados corretos: 8 de 8
  - Valgrinds corretos: 8 de 8
  - Nota de MatheusZortea para o teste software: .50
- - Nota de MatheusZortea: 0+(1.00)+(1.00)+(0)+(0)+(.50)
- - Nota de MatheusZortea: 2.50
+ - Nota de MatheusZortea: 0+(0)+(.12)+(0)+(.12)+(.50)
+ - Nota de MatheusZortea: .74
 
 ----------------------------------------------------------------------------
 

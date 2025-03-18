@@ -10,16 +10,16 @@ Teste completo
   - Valgrinds corretos: 5 de 8
 Nota de MatheusZortea para o teste completo: 0
 Teste fila
-  - Resultados corretos: 8 de 8
+  - Resultados corretos: 1 de 8
   - Valgrinds corretos: 8 de 8
-Nota de MatheusZortea para o teste fila: 1.00
+Nota de MatheusZortea para o teste fila: .12
 Teste ticket
-  - Resultados corretos: 8 de 8
+  - Resultados corretos: 1 de 8
   - Valgrinds corretos: 8 de 8
-Nota de MatheusZortea para o teste ticket: 1.00
+Nota de MatheusZortea para o teste ticket: .12
 Teste software
   - Resultados corretos: 8 de 8
   - Valgrinds corretos: 8 de 8
 Nota de MatheusZortea para o teste software: .50
-Nota de MatheusZortea: 0+(1.00)+(1.00)+(0)+(0)+(.50)
-Nota de MatheusZortea: 2.50
+Nota de MatheusZortea: 0+(0)+(.12)+(0)+(.12)+(.50)
+Nota de MatheusZortea: .74

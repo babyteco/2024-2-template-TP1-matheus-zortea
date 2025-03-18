@@ -57,6 +57,7 @@ typedef char (*func_ptr_tipo)();
  * @return  Uma estrutura Ticket inicializada.
  */
 Ticket *criaTicket(char *cpfSol, void *dado, func_ptr_tempoEstimado getTempo, func_ptr_tipo getTipo, func_ptr_notifica notifica, func_ptr_desaloca desaloca){
+    printf("ENTORU NA FUNCAO DE CRIAR TICKET \n");
     Ticket *t = (Ticket*) malloc(sizeof(Ticket));
     strcpy(t->cpf, cpfSol);
     t->status = 'A';

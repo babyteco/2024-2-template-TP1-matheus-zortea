@@ -26,9 +26,14 @@ Retorna um ponteiro para o usuário inicializado
 */
 Usuario *CriaUsuario(char *nome, char *cpf, Data *d, char *telefone, char *genero, char *setor){
     Usuario *u = (Usuario*) malloc(sizeof(Usuario));
+    u->nascimento = InicializaData();
+    printf("INFORMACOES AO PASSAR PARA O USUARIO:\n");
     strcpy(u->nome, nome);
+    printf("u->nome: %s  nome: %s\n", u->nome, nome);
     strcpy(u->cpf, cpf);
+    printf("u->cpf: %s cpf: %s\n", u->cpf, cpf);
     strcpy(u->telefone, telefone);
+    printf("TELEFONE: %s\n", u->telefone);
     strcpy(u->genero, genero);
     strcpy(u->setor, setor);
     u->nascimento = d;
@@ -49,18 +54,25 @@ Usuario *LeUsuario(){
     char setor[MAX_SETOR];
     
     scanf("%[^\n]\n", nome);
+    printf("ACABOU DE LER O NOME: %s\n", nome);
     scanf("%[^\n]\n", cpf);
+    printf("ACABOU DE LER O CPF: %s\n", cpf);
     nascimento = LeData();
     scanf("%[^\n]\n", telefone);
+    printf("ACABOU DE LER O TELEFOME: %s\n", telefone);
     scanf("%[^\n]\n", genero);
+    printf("ACABOU DE LER O GENERO: %s\n", genero);
     scanf("%[^\n]\n", setor);
+    printf("ACABOU DE LER O SETOR: %s\n", setor);
     
-    Usuario *u = CriaUsuario(nome, cpf, nascimento, telefone, genero, setor);
+
+    return CriaUsuario(nome, cpf, nascimento, telefone, genero, setor);
     
-    return u;
+    //return u;
 }
 
 void desalocaUsuario(Usuario *u){
+    DesalocaData(u->nascimento);
     free(u);
 }
 

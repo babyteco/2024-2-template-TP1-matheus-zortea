@@ -17,6 +17,7 @@ ListaUsuarios *criaListaUsuarios(){
     lu->u = (Usuario**) malloc(2 * sizeof(Usuario*));
     lu->qtdUsuarios = 0;
     lu->capacidade = 2;
+    return lu;
 }
 
 
@@ -49,11 +50,16 @@ Usuario *getUsuarioNaLista(ListaUsuarios *lu, int i){
     return lu->u[i];
 }
 
-//retorna o indice do usuario na lista se ele existir, 0 caso contrario
+//retorna 1 se ele existir, 0 caso contrario
 int comparaCPF(ListaUsuarios *lu, char *cpf){
+    
+    printf("QUANTIDADE DE USUARIOS NA LISTA DE USUARIOS: %d\n", lu->qtdUsuarios);
+
     for (int i = 0; i < lu->qtdUsuarios; i++){
+        printf("NOTIFICACAO DE USUARIO APOS INSERIR NA LISTA, FUNCAO COMPARA CPF INFO DO USUARIO[%d]:\n", i);
+        notificaUsuario(lu->u[i]);
         if (strcmp(getCpfUsuario(lu->u[i]), cpf) == 0){
-            return i;
+            return 1;
         }
     }
     return 0;

@@ -15,7 +15,7 @@
 
 #define MAX_TAM_TIPO 20
 
-void *LeCadastraTicket(Fila *f, ListaUsuarios *lu);
+void LeCadastraTicket(Fila *f, ListaUsuarios *lu);
 
 void RealizaAcao(Fila *f);
 
