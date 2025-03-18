@@ -4,10 +4,10 @@
 #include "data.h"
 
 #define MAX_NOME 100
-#define MAX_CPF 14
-#define MAX_TEL 14
-#define MAX_SETOR 10
-#define MAX_GENERO 9
+#define MAX_CPF 20
+#define MAX_TEL 20
+#define MAX_SETOR 20
+#define MAX_GENERO 20
 
 
 typedef struct Usuario Usuario;

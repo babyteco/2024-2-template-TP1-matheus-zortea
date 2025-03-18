@@ -1,4 +1,3 @@
-ENTORU NA FUNCAO DE CRIAR TICKET 
 ----- RELATORIO GERAL -----
 - Qtd tickets: 1
 - Qtd tickets (A): 1

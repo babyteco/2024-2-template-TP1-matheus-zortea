@@ -5,8 +5,8 @@
 
 #define MAX_TAM_NOME_MANUTENCAO 100
 #define MAX_TAM_LOCAL 100
-#define MAX_TAM_ESTADO 10
-#define MAX_TAM_SETOR 12
+#define MAX_TAM_ESTADO 20
+#define MAX_TAM_SETOR 20
 
 
 /**
@@ -46,6 +46,7 @@ Manutencao *lerManutencao(){
     scanf("%[^\n]\n", estado);
     scanf("%[^\n]\n", local);
     Manutencao *m = criaManuencao(nome, estado, local);
+    m->tempo = setTempoEstimadoManutencao(m);
     return m;
 }
 
@@ -54,7 +55,7 @@ Manutencao *lerManutencao(){
  * Tempo estimado depende da categoria e impacto
  * @param m  Ticket do tipo Manutencao
  */
-void setTempoEstimadoManutencao(Manutencao *m){
+int setTempoEstimadoManutencao(Manutencao *m){
     int tempoEstado = 0;
     int tempoSetor = 0;
     if (strcmp(m->estado, "RUIM") == 0){
@@ -82,8 +83,11 @@ void setTempoEstimadoManutencao(Manutencao *m){
     if (strcmp(m->setor, "MARKETING") == 0){
         tempoSetor = 1;
     }
-
-    m->tempo = tempoEstado * tempoSetor;
+    
+    int tempo;
+    tempo = tempoEstado * tempoSetor;
+    
+    return tempo;
 }
 
 /**

@@ -108,7 +108,6 @@
 - Tempo Trabalhado: 0h
 ----------------------------
 
-ENTORU NA FUNCAO DE CRIAR TICKET 
 ----- FILA DE TICKETS -----
 ---------TICKET-----------
 - ID: Tick-1

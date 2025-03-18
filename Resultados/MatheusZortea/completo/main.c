@@ -31,13 +31,8 @@ int main(){
         }
         
         if (operacao == 'U') {
-            printf("entrou para ler o usuario namoral\n");
             Usuario *u = LeUsuario();
-            printf("USUARIO ANTES DE ENTRAR NA LISTA:\n");
-            notificaUsuario(u);
             insereUsuarioLista(lu, u);
-            printf("USUARIO DEPOIS DE ENTRAR NA LISTA:\n");
-            notificaUsuario(u);
         }
         
         if (operacao == 'A') {

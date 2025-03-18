@@ -61,16 +61,13 @@ void insereTicketFila(Fila *f, char *cpfSol, void *dado, func_ptr_tempoEstimado 
     }
 
     f->tics[f->qtd] = criaTicket(cpfSol, dado, getTempo, getTipo, notifica, desaloca);
-    printf("chegou aq\n");
     
     char id[15] = "Tick-";
     char num[7];
     sprintf(num, "%d", f->qtd + 1);
     strcat(id, num);
     setIDTicket(f->tics[f->qtd], id);
-    printf("QUANTIDADE DE TICKETS NA FILA ANTES DE INCREMENTAR: %d\n", f->qtd);
     f->qtd = f->qtd + 1;
-    printf("QUANTIDADE DE TICKETS NA FILA DEPOIS DE INCREMENTAR: %d\n", f->qtd);
 }
 
 /**
@@ -113,11 +110,8 @@ Ticket *getTicketNaFila(Fila *f, int i){
  * @param f  Fila inicializada contendo zero ou mais tickets.
  */
 void notificaFila(Fila *f){
-    //printf("----- FILA DE TICKETS -----\n");
-    printf("QUANTIDADE DE TICKETS NA FILA: %d\n", f->qtd);
     for (int i = 0; i < f->qtd; i++){
         notificaTicket(f->tics[i]);
         printf("\n");
     }
-    //printf("---------------------------\n");    
 }

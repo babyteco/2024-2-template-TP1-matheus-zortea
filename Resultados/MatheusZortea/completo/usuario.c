@@ -5,10 +5,10 @@
 #include"data.h"
 
 #define MAX_NOME 100
-#define MAX_CPF 14
-#define MAX_TEL 14
-#define MAX_SETOR 10
-#define MAX_GENERO 9
+#define MAX_CPF 20
+#define MAX_TEL 20
+#define MAX_SETOR 20
+#define MAX_GENERO 20
 
 typedef struct Usuario{
     char nome[MAX_NOME];
@@ -27,13 +27,9 @@ Retorna um ponteiro para o usuário inicializado
 Usuario *CriaUsuario(char *nome, char *cpf, Data *d, char *telefone, char *genero, char *setor){
     Usuario *u = (Usuario*) malloc(sizeof(Usuario));
     u->nascimento = InicializaData();
-    printf("INFORMACOES AO PASSAR PARA O USUARIO:\n");
     strcpy(u->nome, nome);
-    printf("u->nome: %s  nome: %s\n", u->nome, nome);
     strcpy(u->cpf, cpf);
-    printf("u->cpf: %s cpf: %s\n", u->cpf, cpf);
     strcpy(u->telefone, telefone);
-    printf("TELEFONE: %s\n", u->telefone);
     strcpy(u->genero, genero);
     strcpy(u->setor, setor);
     u->nascimento = d;
@@ -46,29 +42,17 @@ Le as informações do usuário da entrada padrão
 Retorna um ponteiro para o Usuario
 */
 Usuario *LeUsuario(){
-    char nome[MAX_NOME];
-    char cpf[MAX_CPF];
-    Data *nascimento;
-    char telefone[MAX_TEL];
-    char genero[MAX_GENERO];
-    char setor[MAX_SETOR];
-    
-    scanf("%[^\n]\n", nome);
-    printf("ACABOU DE LER O NOME: %s\n", nome);
-    scanf("%[^\n]\n", cpf);
-    printf("ACABOU DE LER O CPF: %s\n", cpf);
-    nascimento = LeData();
-    scanf("%[^\n]\n", telefone);
-    printf("ACABOU DE LER O TELEFOME: %s\n", telefone);
-    scanf("%[^\n]\n", genero);
-    printf("ACABOU DE LER O GENERO: %s\n", genero);
-    scanf("%[^\n]\n", setor);
-    printf("ACABOU DE LER O SETOR: %s\n", setor);
-    
+    Usuario *u = (Usuario*) malloc(sizeof(Usuario));
+    u->nascimento = InicializaData();
+        
+    scanf("%[^\n]\n", u->nome);
+    scanf("%[^\n]\n", u->cpf);
+    u->nascimento = LeData();
+    scanf("%[^\n]\n", u->telefone);
+    scanf("%[^\n]\n", u->genero);
+    scanf("%[^\n]\n", u->setor);
 
-    return CriaUsuario(nome, cpf, nascimento, telefone, genero, setor);
-    
-    //return u;
+    return u;
 }
 
 void desalocaUsuario(Usuario *u){

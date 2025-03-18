@@ -1,0 +1,72 @@
+In file included from gerencia.c:5:
+usuario.h:7: warning: "MAX_CPF" redefined
+    7 | #define MAX_CPF 20
+      | 
+In file included from gerencia.c:4:
+tecnico.h:8: note: this is the location of the previous definition
+    8 | #define MAX_CPF 14
+      | 
+In file included from gerencia.c:5:
+usuario.h:8: warning: "MAX_TEL" redefined
+    8 | #define MAX_TEL 20
+      | 
+In file included from gerencia.c:4:
+tecnico.h:9: note: this is the location of the previous definition
+    9 | #define MAX_TEL 14
+      | 
+In file included from gerencia.c:5:
+usuario.h:10: warning: "MAX_GENERO" redefined
+   10 | #define MAX_GENERO 20
+      | 
+In file included from gerencia.c:4:
+tecnico.h:11: note: this is the location of the previous definition
+   11 | #define MAX_GENERO 9
+      | 
+In file included from listaTecnicos.c:5:
+usuario.h:7: warning: "MAX_CPF" redefined
+    7 | #define MAX_CPF 20
+      | 
+In file included from listaTecnicos.c:4:
+tecnico.h:8: note: this is the location of the previous definition
+    8 | #define MAX_CPF 14
+      | 
+In file included from listaTecnicos.c:5:
+usuario.h:8: warning: "MAX_TEL" redefined
+    8 | #define MAX_TEL 20
+      | 
+In file included from listaTecnicos.c:4:
+tecnico.h:9: note: this is the location of the previous definition
+    9 | #define MAX_TEL 14
+      | 
+In file included from listaTecnicos.c:5:
+usuario.h:10: warning: "MAX_GENERO" redefined
+   10 | #define MAX_GENERO 20
+      | 
+In file included from listaTecnicos.c:4:
+tecnico.h:11: note: this is the location of the previous definition
+   11 | #define MAX_GENERO 9
+      | 
+In file included from main.c:6:
+tecnico.h:8: warning: "MAX_CPF" redefined
+    8 | #define MAX_CPF 14
+      | 
+In file included from main.c:5:
+usuario.h:7: note: this is the location of the previous definition
+    7 | #define MAX_CPF 20
+      | 
+In file included from main.c:6:
+tecnico.h:9: warning: "MAX_TEL" redefined
+    9 | #define MAX_TEL 14
+      | 
+In file included from main.c:5:
+usuario.h:8: note: this is the location of the previous definition
+    8 | #define MAX_TEL 20
+      | 
+In file included from main.c:6:
+tecnico.h:11: warning: "MAX_GENERO" redefined
+   11 | #define MAX_GENERO 9
+      | 
+In file included from main.c:5:
+usuario.h:10: note: this is the location of the previous definition
+   10 | #define MAX_GENERO 20
+      | 

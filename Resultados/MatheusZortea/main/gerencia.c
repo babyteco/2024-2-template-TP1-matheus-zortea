@@ -26,7 +26,6 @@ void LeCadastraTicket(Fila *f, ListaUsuarios *lu){
     scanf("%[^\n]\n", tipo);
 
     if (strcmp(tipo, "MANUTENCAO") == 0) {
-        printf("ENTROU PARA LER MANUTENCAO: CPF: %s TIPO: %s\n", cpf, tipo);
         Manutencao *m = lerManutencao();
         
         if(comparaCPF(lu, cpf) != 0) {
@@ -37,27 +36,18 @@ void LeCadastraTicket(Fila *f, ListaUsuarios *lu){
         }
     }
 
-    if (strcmp(tipo, "OUTROS") == 0) {
-                
+    if (strcmp(tipo, "OUTROS") == 0) {  
         Outros *o = lerOutros();
-        printf("CPF SOLICITANTE: %s\n", cpf);
         
         if (comparaCPF(lu, cpf) == 1) {
-            printf("PASSOU DO ORIMEIRO IF DA GERENCIA\n");
             insereTicketFila(f, cpf, o, getTempoEstimadoOutros, getTipoOutros, notificaOutros, desalocaOutros);
-            printf("PASSOU DA FUNCAO INSERE TICKET NA FILA\n");
             ContabilizaTicketUsuario(lu, cpf);
-            printf("PASSOU DO CONTABILIZA TICKET USUARIO\n");
         } else {
-            printf("DESALOCOU\n");
             desalocaOutros(o);
         }
     }
 
     if (strcmp(tipo, "SOFTWARE") == 0) {
-        
-        printf("ENTROU PARA LER SOFTWARE: CPF: %s TIPO: %s\n", cpf, tipo);
-
         Software *s = lerSoftware();
         
         if (comparaCPF(lu, cpf) != 0) {

@@ -3,8 +3,8 @@
 
 #define MAX_TAM_NOME_MANUTENCAO 100
 #define MAX_TAM_LOCAL 100
-#define MAX_TAM_ESTADO 10
-#define MAX_TAM_SETOR 12
+#define MAX_TAM_ESTADO 20
+#define MAX_TAM_SETOR 20
 
 
 /**
@@ -33,7 +33,7 @@ Manutencao *lerManutencao();
  * Tempo estimado depende da categoria e impacto
  * @param s  Ticket do tipo Manutencao
  */
-void setTempoEstimadoManutencao(Manutencao *s);
+int setTempoEstimadoManutencao(Manutencao *s);
 
 /**
  * @brief  Retorna o tempo estimado para resolver um ticket do tipo Manutencao.
