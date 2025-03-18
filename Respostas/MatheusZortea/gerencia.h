@@ -13,11 +13,9 @@
 #include "outros.h"
 #include "software.h"
 
-#define MAX_TAM_TIPO 20
 
 void LeCadastraTicket(Fila *f, ListaUsuarios *lu);
 
-void RealizaAcao(Fila *f);
-
+void RealizaAcao(Fila *f, ListaUsuarios *lu, ListaTecnicos *lt);
 
 #endif

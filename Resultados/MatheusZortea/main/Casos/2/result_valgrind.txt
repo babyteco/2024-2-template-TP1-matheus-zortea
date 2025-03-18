@@ -1,87 +1,94 @@
-==330291== Memcheck, a memory error detector
-==330291== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==330291== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==330291== Command: Resultados/MatheusZortea/main/prog Resultados/MatheusZortea/main/Casos/2
-==330291== Parent PID: 330290
-==330291== 
-==330291== Invalid write of size 8
-==330291==    at 0x109A7F: insereTecnicoLista (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==330291==    by 0x109FAB: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==330291==  Address 0x4a4a5e0 is 0 bytes after a block of size 16 alloc'd
-==330291==    at 0x483DFAF: realloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
-==330291==    by 0x109A4B: insereTecnicoLista (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==330291==    by 0x109FAB: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==330291== 
-==330291== Invalid write of size 8
-==330291==    at 0x109D12: insereUsuarioLista (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==330291==    by 0x109FD4: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==330291==  Address 0x4a4ab10 is 0 bytes after a block of size 16 alloc'd
-==330291==    at 0x483DFAF: realloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
-==330291==    by 0x109CDE: insereUsuarioLista (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==330291==    by 0x109FD4: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==330291== 
-==330291== Invalid read of size 8
-==330291==    at 0x109DFD: comparaCPF (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==330291==    by 0x1097B0: LeCadastraTicket (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==330291==    by 0x109FEF: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==330291==  Address 0x4a4ab10 is 0 bytes after a block of size 16 alloc'd
-==330291==    at 0x483DFAF: realloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
-==330291==    by 0x109CDE: insereUsuarioLista (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==330291==    by 0x109FD4: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==330291== 
-==330291== Invalid read of size 8
-==330291==    at 0x109DFD: comparaCPF (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==330291==    by 0x109E62: ContabilizaTicketUsuario (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==330291==    by 0x109807: LeCadastraTicket (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==330291==    by 0x109FEF: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==330291==  Address 0x4a4ab10 is 0 bytes after a block of size 16 alloc'd
-==330291==    at 0x483DFAF: realloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
-==330291==    by 0x109CDE: insereUsuarioLista (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==330291==    by 0x109FD4: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==330291== 
-==330291== 
-==330291== HEAP SUMMARY:
-==330291==     in use at exit: 2,172 bytes in 26 blocks
-==330291==   total heap usage: 29 allocs, 3 frees, 6,300 bytes allocated
-==330291== 
-==330291== 48 bytes in 4 blocks are definitely lost in loss record 6 of 15
-==330291==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
-==330291==    by 0x10929E: InicializaData (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==330291==    by 0x10AFAD: LeUsuario (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==330291==    by 0x109FBD: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==330291== 
-==330291== 180 (168 direct, 12 indirect) bytes in 1 blocks are definitely lost in loss record 8 of 15
-==330291==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
-==330291==    by 0x10A8B4: CriaTecnico (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==330291==    by 0x10AA91: LeTecnico (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==330291==    by 0x109F94: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==330291== 
-==330291== 392 (16 direct, 376 indirect) bytes in 1 blocks are definitely lost in loss record 11 of 15
-==330291==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
-==330291==    by 0x1099DD: criaListaTecnicos (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==330291==    by 0x109F45: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==330291== 
-==330291== 408 (384 direct, 24 indirect) bytes in 2 blocks are definitely lost in loss record 12 of 15
-==330291==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
-==330291==    by 0x10AF9F: LeUsuario (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==330291==    by 0x109FBD: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==330291== 
-==330291== 440 (16 direct, 424 indirect) bytes in 1 blocks are definitely lost in loss record 13 of 15
-==330291==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
-==330291==    by 0x109C70: criaListaUsuarios (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==330291==    by 0x109F53: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==330291== 
-==330291== 704 (16 direct, 688 indirect) bytes in 1 blocks are definitely lost in loss record 15 of 15
-==330291==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
-==330291==    by 0x1093FA: criaFila (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==330291==    by 0x109F61: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==330291== 
-==330291== LEAK SUMMARY:
-==330291==    definitely lost: 648 bytes in 10 blocks
-==330291==    indirectly lost: 1,524 bytes in 16 blocks
-==330291==      possibly lost: 0 bytes in 0 blocks
-==330291==    still reachable: 0 bytes in 0 blocks
-==330291==         suppressed: 0 bytes in 0 blocks
-==330291== 
-==330291== For lists of detected and suppressed errors, rerun with: -s
-==330291== ERROR SUMMARY: 11 errors from 10 contexts (suppressed: 0 from 0)
+==127370== Memcheck, a memory error detector
+==127370== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==127370== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==127370== Command: Resultados/MatheusZortea/main/prog Resultados/MatheusZortea/main/Casos/2
+==127370== Parent PID: 127369
+==127370== 
+==127370== Invalid write of size 8
+==127370==    at 0x109AA7: insereTecnicoLista (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127370==    by 0x109F9F: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127370==  Address 0x4a4a730 is 0 bytes after a block of size 16 alloc'd
+==127370==    at 0x483DFAF: realloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==127370==    by 0x109A73: insereTecnicoLista (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127370==    by 0x109F9F: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127370== 
+==127370== Invalid write of size 8
+==127370==    at 0x109D20: insereUsuarioLista (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127370==    by 0x109FC8: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127370==  Address 0x4a4ac60 is 0 bytes after a block of size 16 alloc'd
+==127370==    at 0x483DFAF: realloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==127370==    by 0x109CEC: insereUsuarioLista (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127370==    by 0x109FC8: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127370== 
+==127370== Invalid read of size 8
+==127370==    at 0x109E0B: comparaCPF (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127370==    by 0x1097B0: LeCadastraTicket (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127370==    by 0x109FE3: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127370==  Address 0x4a4ac60 is 0 bytes after a block of size 16 alloc'd
+==127370==    at 0x483DFAF: realloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==127370==    by 0x109CEC: insereUsuarioLista (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127370==    by 0x109FC8: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127370== 
+==127370== Invalid read of size 8
+==127370==    at 0x109E0B: comparaCPF (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127370==    by 0x109E70: ContabilizaTicketUsuario (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127370==    by 0x109807: LeCadastraTicket (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127370==    by 0x109FE3: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127370==  Address 0x4a4ac60 is 0 bytes after a block of size 16 alloc'd
+==127370==    at 0x483DFAF: realloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==127370==    by 0x109CEC: insereUsuarioLista (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127370==    by 0x109FC8: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127370== 
+==127370== 
+==127370== HEAP SUMMARY:
+==127370==     in use at exit: 2,304 bytes in 29 blocks
+==127370==   total heap usage: 32 allocs, 3 frees, 6,432 bytes allocated
+==127370== 
+==127370== 36 bytes in 3 blocks are definitely lost in loss record 5 of 16
+==127370==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==127370==    by 0x10929E: InicializaData (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127370==    by 0x10A902: CriaTecnico (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127370==    by 0x10AAE7: LeTecnico (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127370==    by 0x109F88: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127370== 
+==127370== 48 bytes in 4 blocks are definitely lost in loss record 7 of 16
+==127370==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==127370==    by 0x10929E: InicializaData (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127370==    by 0x10B003: LeUsuario (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127370==    by 0x109FB1: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127370== 
+==127370== 212 (200 direct, 12 indirect) bytes in 1 blocks are definitely lost in loss record 9 of 16
+==127370==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==127370==    by 0x10A8F4: CriaTecnico (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127370==    by 0x10AAE7: LeTecnico (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127370==    by 0x109F88: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127370== 
+==127370== 408 (384 direct, 24 indirect) bytes in 2 blocks are definitely lost in loss record 12 of 16
+==127370==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==127370==    by 0x10AFF5: LeUsuario (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127370==    by 0x109FB1: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127370== 
+==127370== 440 (16 direct, 424 indirect) bytes in 1 blocks are definitely lost in loss record 13 of 16
+==127370==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==127370==    by 0x109C7E: criaListaUsuarios (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127370==    by 0x109F47: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127370== 
+==127370== 456 (16 direct, 440 indirect) bytes in 1 blocks are definitely lost in loss record 14 of 16
+==127370==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==127370==    by 0x109A05: criaListaTecnicos (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127370==    by 0x109F39: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127370== 
+==127370== 704 (16 direct, 688 indirect) bytes in 1 blocks are definitely lost in loss record 16 of 16
+==127370==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==127370==    by 0x1093FA: criaFila (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127370==    by 0x109F55: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==127370== 
+==127370== LEAK SUMMARY:
+==127370==    definitely lost: 716 bytes in 13 blocks
+==127370==    indirectly lost: 1,588 bytes in 16 blocks
+==127370==      possibly lost: 0 bytes in 0 blocks
+==127370==    still reachable: 0 bytes in 0 blocks
+==127370==         suppressed: 0 bytes in 0 blocks
+==127370== 
+==127370== For lists of detected and suppressed errors, rerun with: -s
+==127370== ERROR SUMMARY: 12 errors from 11 contexts (suppressed: 0 from 0)

@@ -66,12 +66,7 @@ void notificaListaTecnicos(ListaTecnicos *lt){
     for (int i = 0; i < lt->qtdTecnicos; i++){
         printf("--------------------\n");
         notificaTecnico(lt->t[i]);
-        if (i == lt->qtdTecnicos){
-            printf("----------------------------\n");
-        } else {
-            printf("--------------------\n");
-        }
     }
+    printf("----------------------------\n");
     printf("\n");
 }
-

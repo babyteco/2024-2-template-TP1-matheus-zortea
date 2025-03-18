@@ -5,10 +5,10 @@
 #include"data.h"
 
 #define MAX_NOME 100
-#define MAX_CPF 14
-#define MAX_TEL 14
-#define MAX_ATUACAO 5
-#define MAX_GENERO 9
+#define MAX_CPF 20
+#define MAX_TEL 20
+#define MAX_ATUACAO 20
+#define MAX_GENERO 20
 
 typedef struct Tecnico{
     char nome[MAX_NOME];
@@ -28,14 +28,15 @@ Retorna um ponteiro para o usuário inicializado
 */
 Tecnico *CriaTecnico(char *nome, char *cpf, Data *d, char *telefone, char *genero, char *atuacao, int salario, int disptempo){  
     Tecnico *t = (Tecnico*) malloc(sizeof(Tecnico));
+    t->nascimento = InicializaData();
     strcpy(t->nome, nome);
     strcpy(t->cpf, cpf);
     strcpy(t->telefone , telefone);     
     t->nascimento = d;
     strcpy(t->genero, genero);
     strcpy(t->atuacao, atuacao);
-    t->dispTempo = -1;
-    t->salario = -1;
+    t->dispTempo = disptempo;
+    t->salario = salario;
     t->tempoTrabalhado = 0;
     return t;
 }
@@ -96,7 +97,7 @@ void notificaTecnico(Tecnico *t){
     printf("- Telefone: %s\n" , t->telefone);
     printf("- Genero: %s\n", t->genero);
     printf("- Area de Atuacao: %s\n", t->atuacao);
-    printf("- Salario: %d\n", t->salario);
+    printf("- Salario: %d.00\n", t->salario);
     printf("- Disponibilidade: %dh\n", t->dispTempo);
     printf("- Tempo Trabalhado: %dh\n", t->tempoTrabalhado);
 }

@@ -60,7 +60,7 @@ void LeCadastraTicket(Fila *f, ListaUsuarios *lu){
 }
 
 
-void RealizaAcao(Fila *f){
+void RealizaAcao(Fila *f, ListaUsuarios *lu, ListaTecnicos *lt){
     char acao[MAX_TAM_ACAO];
     scanf("%[^\n]\n", acao);
 
@@ -71,15 +71,15 @@ void RealizaAcao(Fila *f){
     if (strcmp(acao, "NOTIFICA") == 0) {
         printf("----- FILA DE TICKETS -----\n");
         notificaFila(f);
-        printf("\n---------------------------\n");
+        printf("---------------------------\n");
     }
     
     if (strcmp(acao, "USUARIOS") == 0) {
-        /* code */
+        notificaListaUsuarios(lu);
     }
     
     if (strcmp(acao, "TECNICOS") == 0){
-        /* code */
+        notificaListaTecnicos(lt);
     }
 
     if (strcmp(acao, "RANKING TECNICOS") == 0) {

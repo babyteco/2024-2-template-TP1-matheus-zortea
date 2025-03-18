@@ -18,6 +18,59 @@
 
 
 
+void RealizaAcao(Fila *f, ListaUsuarios *lu, ListaTecnicos *lt){
+    char acao[MAX_TAM_ACAO];
+    scanf("%[^\n]\n", acao);
+    
+    if (strcmp(acao, "DISTRIBUI") == 0) {
+        /* code */
+    } 
+    
+    if (strcmp(acao, "NOTIFICA") == 0) {
+        printf("----- FILA DE TICKETS -----\n");
+        notificaFila(f);
+        printf("---------------------------\n");
+    }
+    
+    if (strcmp(acao, "USUARIOS") == 0) {
+        notificaListaUsuarios(lu);
+    }
+    
+    if (strcmp(acao, "TECNICOS") == 0){
+        notificaListaTecnicos(lt);
+    }
+    
+    if (strcmp(acao, "RANKING TECNICOS") == 0) {
+        /* code */
+    }
+    
+    if (strcmp(acao, "RANKING USUARIOS") == 0) {
+        
+    }
+    
+    if (strcmp(acao, "RELATORIO") == 0) {
+        /* code */
+    }
+    
+}
+
+void RankingUsuario(ListaUsuarios *lu) {
+    ListaUsuarios *listaOrdenada = criaListaUsuarios();
+    listaOrdenada = lu;
+    
+    //bubble sort para colocar os usuario com mais tickets primeiros
+    for (int i = 0; i < count; i++){
+        for (int j = 0; i < count; j++){
+            if (getTicketsSolicitados()){
+                
+            }
+            
+        }
+        
+    }
+    
+}
+
 void LeCadastraTicket(Fila *f, ListaUsuarios *lu){
     char cpf[MAX_TAM_CPF];
     char tipo[MAX_TAM_TIPO];
@@ -57,41 +110,4 @@ void LeCadastraTicket(Fila *f, ListaUsuarios *lu){
             desalocaSoftware(s);
         } 
     } 
-}
-
-
-void RealizaAcao(Fila *f){
-    char acao[MAX_TAM_ACAO];
-    scanf("%[^\n]\n", acao);
-
-    if (strcmp(acao, "DISTRIBUI") == 0) {
-        /* code */
-    } 
-
-    if (strcmp(acao, "NOTIFICA") == 0) {
-        printf("----- FILA DE TICKETS -----\n");
-        notificaFila(f);
-        printf("\n---------------------------\n");
-    }
-    
-    if (strcmp(acao, "USUARIOS") == 0) {
-        /* code */
-    }
-    
-    if (strcmp(acao, "TECNICOS") == 0){
-        /* code */
-    }
-
-    if (strcmp(acao, "RANKING TECNICOS") == 0) {
-        /* code */
-    }
-    
-    if (strcmp(acao, "RANKING USUARIOS") == 0) {
-        /* code */
-    }
-    
-    if (strcmp(acao, "RELATORIO") == 0) {
-        /* code */
-    }
-    
 }

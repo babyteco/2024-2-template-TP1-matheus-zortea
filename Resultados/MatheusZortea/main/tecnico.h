@@ -4,12 +4,6 @@
 #include "data.h"
 
 
-#define MAX_NOME 100
-#define MAX_CPF 14
-#define MAX_TEL 14
-#define MAX_ATUACAO 5
-#define MAX_GENERO 9
-
 
 typedef struct Tecnico Tecnico;
 

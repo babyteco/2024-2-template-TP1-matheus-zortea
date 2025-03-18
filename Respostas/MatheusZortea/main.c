@@ -40,7 +40,7 @@ int main(){
         }
 
         if (operacao == 'E') {
-            RealizaAcao(f);
+            RealizaAcao(f, lu, lt);
         }
         
         scanf("%c\n", &operacao);

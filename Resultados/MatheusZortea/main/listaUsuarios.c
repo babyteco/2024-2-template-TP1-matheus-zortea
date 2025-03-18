@@ -77,13 +77,9 @@ void notificaListaUsuarios(ListaUsuarios *lu){
     printf("----- BANCO DE USUARIOS -----\n");
     for (int i = 0; i < lu->qtdUsuarios; i++){
         printf("--------------------\n");
-        notificaUsuario(lu->u[i]);
-        if (i == lu->qtdUsuarios){
-            printf("----------------------------\n");
-        } else {
-            printf("--------------------\n");
-        }
+        notificaUsuario(lu->u[i]);     
     }
+    printf("----------------------------\n");
     printf("\n");
 }
 

@@ -31,6 +31,9 @@ typedef struct Manutencao{
 Manutencao *criaManuencao(char *nome, char *estado, char *local){
     Manutencao *m = (Manutencao*) malloc(sizeof(Manutencao));
     m->tempo = 0;
+    strcpy(m->nome, nome);
+    strcpy(m->estado, estado);
+    strcpy(m->local, local);
     return m;
 }
 
@@ -45,7 +48,9 @@ Manutencao *lerManutencao(){
     scanf("%[^\n]\n", nome);
     scanf("%[^\n]\n", estado);
     scanf("%[^\n]\n", local);
+    
     Manutencao *m = criaManuencao(nome, estado, local);
+
     m->tempo = setTempoEstimadoManutencao(m);
     return m;
 }
