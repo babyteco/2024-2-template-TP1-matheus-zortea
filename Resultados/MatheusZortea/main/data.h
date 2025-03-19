@@ -23,11 +23,9 @@ Retorna 1 se d1 for mais antiga ou 2 se d2 for mais antiga
 */
 int DiferencaDatas(Data *d1, Data *d2);
 
-/*
-Imprime a data especificada
-*/
-void ImprimeData(Data *d);
+Data *CopiaData(Data *d);
 
+void ImprimeData(Data *d);
 
 void DesalocaData(Data *d);
 

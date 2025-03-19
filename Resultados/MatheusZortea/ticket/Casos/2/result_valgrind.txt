@@ -1,15 +1,15 @@
-==134133== Memcheck, a memory error detector
-==134133== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==134133== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==134133== Command: Resultados/MatheusZortea/ticket/prog Resultados/MatheusZortea/ticket/Casos/2
-==134133== Parent PID: 134132
-==134133== 
-==134133== 
-==134133== HEAP SUMMARY:
-==134133==     in use at exit: 0 bytes in 0 blocks
-==134133==   total heap usage: 37 allocs, 37 frees, 11,096 bytes allocated
-==134133== 
-==134133== All heap blocks were freed -- no leaks are possible
-==134133== 
-==134133== For lists of detected and suppressed errors, rerun with: -s
-==134133== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==131198== Memcheck, a memory error detector
+==131198== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==131198== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==131198== Command: Resultados/MatheusZortea/ticket/prog Resultados/MatheusZortea/ticket/Casos/2
+==131198== Parent PID: 131197
+==131198== 
+==131198== 
+==131198== HEAP SUMMARY:
+==131198==     in use at exit: 0 bytes in 0 blocks
+==131198==   total heap usage: 37 allocs, 37 frees, 11,096 bytes allocated
+==131198== 
+==131198== All heap blocks were freed -- no leaks are possible
+==131198== 
+==131198== For lists of detected and suppressed errors, rerun with: -s
+==131198== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

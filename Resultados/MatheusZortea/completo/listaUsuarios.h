@@ -21,8 +21,16 @@ Usuario *getUsuarioNaLista(ListaUsuarios *lu, int i);
 
 int comparaCPF(ListaUsuarios *lu, char *cpf);
 
+void TrocaPosicaoUsuarios(ListaUsuarios *lu, int i);
+
+ListaUsuarios *CopiaListaUsuarios(ListaUsuarios *lu);
+
+void RankingUsuario(ListaUsuarios *lu);
+
 void ContabilizaTicketUsuario(ListaUsuarios *lu, char* cpf);
 
 void notificaListaUsuarios(ListaUsuarios *lu);
+
+void notificaRankingUsuarios(ListaUsuarios *lu);
 
 #endif

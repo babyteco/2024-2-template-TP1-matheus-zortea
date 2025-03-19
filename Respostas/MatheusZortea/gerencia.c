@@ -45,7 +45,7 @@ void RealizaAcao(Fila *f, ListaUsuarios *lu, ListaTecnicos *lt){
     }
     
     if (strcmp(acao, "RANKING USUARIOS") == 0) {
-        
+        RankingUsuario(lu);
     }
     
     if (strcmp(acao, "RELATORIO") == 0) {
@@ -54,22 +54,7 @@ void RealizaAcao(Fila *f, ListaUsuarios *lu, ListaTecnicos *lt){
     
 }
 
-void RankingUsuario(ListaUsuarios *lu) {
-    ListaUsuarios *listaOrdenada = criaListaUsuarios();
-    listaOrdenada = lu;
-    
-    //bubble sort para colocar os usuario com mais tickets primeiros
-    for (int i = 0; i < count; i++){
-        for (int j = 0; i < count; j++){
-            if (getTicketsSolicitados()){
-                
-            }
-            
-        }
-        
-    }
-    
-}
+
 
 void LeCadastraTicket(Fila *f, ListaUsuarios *lu){
     char cpf[MAX_TAM_CPF];
@@ -79,8 +64,18 @@ void LeCadastraTicket(Fila *f, ListaUsuarios *lu){
     scanf("%[^\n]\n", tipo);
 
     if (strcmp(tipo, "MANUTENCAO") == 0) {
-        Manutencao *m = lerManutencao();
         
+        //passar o setor para o lemanutencao, para ele calcular as horas estimadas
+        int flag = comparaCPF(lu, cpf);
+        Manutencao *m;
+        if (flag != 0) {
+            if (flag != -1) {
+                m = lerManutencao(getSetorUsuario(getUsuarioNaLista(lu, flag)));
+            } else {
+                m = lerManutencao(getSetorUsuario(getUsuarioNaLista(lu, 0)));
+            }
+        }
+
         if(comparaCPF(lu, cpf) != 0) {
             insereTicketFila(f, cpf, m, getTempoEstimadoManutencao, getTipoManutencao, notificaManutencao, desalocaManutencao);
             ContabilizaTicketUsuario(lu, cpf);
@@ -92,7 +87,7 @@ void LeCadastraTicket(Fila *f, ListaUsuarios *lu){
     if (strcmp(tipo, "OUTROS") == 0) {  
         Outros *o = lerOutros();
         
-        if (comparaCPF(lu, cpf) == 1) {
+        if (comparaCPF(lu, cpf) != 0) {
             insereTicketFila(f, cpf, o, getTempoEstimadoOutros, getTipoOutros, notificaOutros, desalocaOutros);
             ContabilizaTicketUsuario(lu, cpf);
         } else {

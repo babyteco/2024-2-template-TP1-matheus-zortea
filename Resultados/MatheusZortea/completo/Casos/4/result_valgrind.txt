@@ -1,49 +1,135 @@
-==131966== Memcheck, a memory error detector
-==131966== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==131966== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==131966== Command: Resultados/MatheusZortea/completo/prog Resultados/MatheusZortea/completo/Casos/4
-==131966== Parent PID: 131965
-==131966== 
-==131966== Invalid write of size 8
-==131966==    at 0x109DBF: insereUsuarioLista (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
-==131966==    by 0x10A067: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
-==131966==  Address 0x4a4aab0 is 0 bytes after a block of size 16 alloc'd
-==131966==    at 0x483DFAF: realloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
-==131966==    by 0x109D8B: insereUsuarioLista (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
-==131966==    by 0x10A067: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
-==131966== 
---131966-- VALGRIND INTERNAL ERROR: Valgrind received a signal 11 (SIGSEGV) - exiting
---131966-- si_code=1;  Faulting address: 0x9496208;  sp: 0x1002ca9e40
-
-valgrind: the 'impossible' happened:
-   Killed by fatal signal
-
-host stacktrace:
-==131966==    at 0x5805160F: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
-==131966==    by 0x58005BF7: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
-==131966==    by 0x580A7204: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
-==131966==    by 0x580F5FD4: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
-
-sched status:
-  running_tid=1
-
-Thread 1: status = VgTs_Runnable (lwpid 131966)
-==131966==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
-==131966==    by 0x10B0B7: LeUsuario (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
-==131966==    by 0x10A050: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
-client stack range: [0x1FFEFFD000 0x1FFF000FFF] client SP: 0x1FFEFFEEE0
-valgrind stack range: [0x1002BAA000 0x1002CA9FFF] top usage: 18696 of 1048576
-
-
-Note: see also the FAQ in the source distribution.
-It contains workarounds to several common problems.
-In particular, if Valgrind aborted or crashed after
-identifying problems in your program, there's a good chance
-that fixing those problems will prevent Valgrind aborting or
-crashing, especially if it happened in m_mallocfree.c.
-
-If that doesn't help, please report this bug to: www.valgrind.org
-
-In the bug report, send all the above text, the valgrind
-version, and what OS and version you are using.  Thanks.
-
+==128283== Memcheck, a memory error detector
+==128283== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==128283== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==128283== Command: Resultados/MatheusZortea/completo/prog Resultados/MatheusZortea/completo/Casos/4
+==128283== Parent PID: 128282
+==128283== 
+==128283== Conditional jump or move depends on uninitialised value(s)
+==128283==    at 0x48CB958: __vfprintf_internal (vfprintf-internal.c:1687)
+==128283==    by 0x48B5D3E: printf (printf.c:33)
+==128283==    by 0x10B7F4: notificaUsuario (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x10A37E: notificaListaUsuarios (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x10981C: RealizaAcao (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x10A50E: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283== 
+==128283== Use of uninitialised value of size 8
+==128283==    at 0x48AF69B: _itoa_word (_itoa.c:179)
+==128283==    by 0x48CB574: __vfprintf_internal (vfprintf-internal.c:1687)
+==128283==    by 0x48B5D3E: printf (printf.c:33)
+==128283==    by 0x10B7F4: notificaUsuario (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x10A37E: notificaListaUsuarios (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x10981C: RealizaAcao (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x10A50E: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283== 
+==128283== Conditional jump or move depends on uninitialised value(s)
+==128283==    at 0x48AF6AD: _itoa_word (_itoa.c:179)
+==128283==    by 0x48CB574: __vfprintf_internal (vfprintf-internal.c:1687)
+==128283==    by 0x48B5D3E: printf (printf.c:33)
+==128283==    by 0x10B7F4: notificaUsuario (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x10A37E: notificaListaUsuarios (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x10981C: RealizaAcao (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x10A50E: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283== 
+==128283== Conditional jump or move depends on uninitialised value(s)
+==128283==    at 0x48CC228: __vfprintf_internal (vfprintf-internal.c:1687)
+==128283==    by 0x48B5D3E: printf (printf.c:33)
+==128283==    by 0x10B7F4: notificaUsuario (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x10A37E: notificaListaUsuarios (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x10981C: RealizaAcao (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x10A50E: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283== 
+==128283== Conditional jump or move depends on uninitialised value(s)
+==128283==    at 0x48CB6EE: __vfprintf_internal (vfprintf-internal.c:1687)
+==128283==    by 0x48B5D3E: printf (printf.c:33)
+==128283==    by 0x10B7F4: notificaUsuario (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x10A37E: notificaListaUsuarios (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x10981C: RealizaAcao (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x10A50E: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283== 
+==128283== Conditional jump or move depends on uninitialised value(s)
+==128283==    at 0x483C9F5: free (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==128283==    by 0x10A876: desalocaManutencao (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x1099F2: LeCadastraTicket (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x10A4EF: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283== 
+==128283== Invalid read of size 4
+==128283==    at 0x109C6A: desalocaListaTecnicos (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x10A54A: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==  Address 0x4a49048 is 8 bytes inside a block of size 16 free'd
+==128283==    at 0x483CA3F: free (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==128283==    by 0x10A876: desalocaManutencao (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x1099F2: LeCadastraTicket (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x10A4EF: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==  Block was alloc'd at
+==128283==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==128283==    by 0x109B60: criaListaTecnicos (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x10A445: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283== 
+==128283== Invalid read of size 8
+==128283==    at 0x109C47: desalocaListaTecnicos (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x10A54A: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==  Address 0x4a49040 is 0 bytes inside a block of size 16 free'd
+==128283==    at 0x483CA3F: free (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==128283==    by 0x10A876: desalocaManutencao (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x1099F2: LeCadastraTicket (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x10A4EF: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==  Block was alloc'd at
+==128283==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==128283==    by 0x109B60: criaListaTecnicos (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x10A445: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283== 
+==128283== Invalid read of size 8
+==128283==    at 0x109C76: desalocaListaTecnicos (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x10A54A: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==  Address 0x4a49040 is 0 bytes inside a block of size 16 free'd
+==128283==    at 0x483CA3F: free (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==128283==    by 0x10A876: desalocaManutencao (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x1099F2: LeCadastraTicket (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x10A4EF: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==  Block was alloc'd at
+==128283==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==128283==    by 0x109B60: criaListaTecnicos (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x10A445: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283== 
+==128283== Invalid free() / delete / delete[] / realloc()
+==128283==    at 0x483CA3F: free (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==128283==    by 0x109C8C: desalocaListaTecnicos (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x10A54A: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==  Address 0x4a49040 is 0 bytes inside a block of size 16 free'd
+==128283==    at 0x483CA3F: free (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==128283==    by 0x10A876: desalocaManutencao (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x1099F2: LeCadastraTicket (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x10A4EF: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==  Block was alloc'd at
+==128283==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==128283==    by 0x109B60: criaListaTecnicos (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x10A445: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283== 
+==128283== 
+==128283== HEAP SUMMARY:
+==128283==     in use at exit: 144 bytes in 12 blocks
+==128283==   total heap usage: 48 allocs, 37 frees, 11,648 bytes allocated
+==128283== 
+==128283== 48 bytes in 4 blocks are definitely lost in loss record 1 of 2
+==128283==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==128283==    by 0x1092BE: InicializaData (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x10AE70: CriaTecnico (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x10B055: LeTecnico (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x10A494: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283== 
+==128283== 96 bytes in 8 blocks are definitely lost in loss record 2 of 2
+==128283==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==128283==    by 0x1092BE: InicializaData (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x10B57D: LeUsuario (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283==    by 0x10A4BD: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
+==128283== 
+==128283== LEAK SUMMARY:
+==128283==    definitely lost: 144 bytes in 12 blocks
+==128283==    indirectly lost: 0 bytes in 0 blocks
+==128283==      possibly lost: 0 bytes in 0 blocks
+==128283==    still reachable: 0 bytes in 0 blocks
+==128283==         suppressed: 0 bytes in 0 blocks
+==128283== 
+==128283== Use --track-origins=yes to see where uninitialised values come from
+==128283== For lists of detected and suppressed errors, rerun with: -s
+==128283== ERROR SUMMARY: 54 errors from 12 contexts (suppressed: 0 from 0)

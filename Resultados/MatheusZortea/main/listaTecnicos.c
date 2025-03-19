@@ -26,8 +26,8 @@ ListaTecnicos *criaListaTecnicos(){
 
 void insereTecnicoLista(ListaTecnicos *lt, Tecnico *t){
     if (lt->capacidade == lt->qtdTecnicos){
-        lt->t = (Tecnico**) realloc(lt->t, 2 * sizeof(Tecnico*));
-        lt->capacidade += 2;
+        lt->t = (Tecnico**) realloc(lt->t, (lt->capacidade * 2) * sizeof(Tecnico*));
+        lt->capacidade *= 2;
     }
     
     lt->t[lt->qtdTecnicos] = t;

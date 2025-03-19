@@ -18,6 +18,44 @@
 
 
 
+void RealizaAcao(Fila *f, ListaUsuarios *lu, ListaTecnicos *lt){
+    char acao[MAX_TAM_ACAO];
+    scanf("%[^\n]\n", acao);
+    
+    if (strcmp(acao, "DISTRIBUI") == 0) {
+        /* code */
+    } 
+    
+    if (strcmp(acao, "NOTIFICA") == 0) {
+        printf("----- FILA DE TICKETS -----\n");
+        notificaFila(f);
+        printf("---------------------------\n");
+    }
+    
+    if (strcmp(acao, "USUARIOS") == 0) {
+        notificaListaUsuarios(lu);
+    }
+    
+    if (strcmp(acao, "TECNICOS") == 0){
+        notificaListaTecnicos(lt);
+    }
+    
+    if (strcmp(acao, "RANKING TECNICOS") == 0) {
+        /* code */
+    }
+    
+    if (strcmp(acao, "RANKING USUARIOS") == 0) {
+        RankingUsuario(lu);
+    }
+    
+    if (strcmp(acao, "RELATORIO") == 0) {
+        /* code */
+    }
+    
+}
+
+
+
 void LeCadastraTicket(Fila *f, ListaUsuarios *lu){
     char cpf[MAX_TAM_CPF];
     char tipo[MAX_TAM_TIPO];
@@ -26,8 +64,18 @@ void LeCadastraTicket(Fila *f, ListaUsuarios *lu){
     scanf("%[^\n]\n", tipo);
 
     if (strcmp(tipo, "MANUTENCAO") == 0) {
-        Manutencao *m = lerManutencao();
         
+        //passar o setor para o lemanutencao, para ele calcular as horas estimadas
+        int flag = comparaCPF(lu, cpf);
+        Manutencao *m;
+        if (flag != 0) {
+            if (flag != -1) {
+                m = lerManutencao(getSetorUsuario(getUsuarioNaLista(lu, flag)));
+            } else {
+                m = lerManutencao(getSetorUsuario(getUsuarioNaLista(lu, 0)));
+            }
+        }
+
         if(comparaCPF(lu, cpf) != 0) {
             insereTicketFila(f, cpf, m, getTempoEstimadoManutencao, getTipoManutencao, notificaManutencao, desalocaManutencao);
             ContabilizaTicketUsuario(lu, cpf);
@@ -57,41 +105,4 @@ void LeCadastraTicket(Fila *f, ListaUsuarios *lu){
             desalocaSoftware(s);
         } 
     } 
-}
-
-
-void RealizaAcao(Fila *f, ListaUsuarios *lu, ListaTecnicos *lt){
-    char acao[MAX_TAM_ACAO];
-    scanf("%[^\n]\n", acao);
-
-    if (strcmp(acao, "DISTRIBUI") == 0) {
-        /* code */
-    } 
-
-    if (strcmp(acao, "NOTIFICA") == 0) {
-        printf("----- FILA DE TICKETS -----\n");
-        notificaFila(f);
-        printf("---------------------------\n");
-    }
-    
-    if (strcmp(acao, "USUARIOS") == 0) {
-        notificaListaUsuarios(lu);
-    }
-    
-    if (strcmp(acao, "TECNICOS") == 0){
-        notificaListaTecnicos(lt);
-    }
-
-    if (strcmp(acao, "RANKING TECNICOS") == 0) {
-        /* code */
-    }
-    
-    if (strcmp(acao, "RANKING USUARIOS") == 0) {
-        /* code */
-    }
-    
-    if (strcmp(acao, "RELATORIO") == 0) {
-        /* code */
-    }
-    
 }

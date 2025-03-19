@@ -20,7 +20,17 @@ void desalocaUsuario(Usuario *u);
 
 int getTicketsSolicitados(Usuario *u);
 
+char *getNomeUsuario(Usuario *u);
+
 char *getCpfUsuario(Usuario *u);
+
+Data *getNascimentoUsuario(Usuario *u);
+
+char *getTelefoneUsuario(Usuario *u);
+
+char *getGeneroUsuario(Usuario *u);
+
+char *getSetorUsuario(Usuario *u);
 
 void AcrescentaTicketUsuario(Usuario *u);
 

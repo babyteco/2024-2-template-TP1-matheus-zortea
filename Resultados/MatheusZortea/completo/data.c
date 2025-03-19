@@ -57,6 +57,14 @@ int DiferencaDatas(Data *d1, Data *d2){
     return -1;
 }
 
+Data *CopiaData(Data *d){
+    Data *novadata = InicializaData();
+    novadata->dia = d->dia;   
+    novadata->mes = d->mes;   
+    novadata->ano = d->ano;   
+    return novadata;
+}
+
 /*
 Imprime a data especificada
 */

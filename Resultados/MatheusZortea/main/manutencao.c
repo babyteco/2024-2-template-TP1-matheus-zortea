@@ -41,7 +41,7 @@ Manutencao *criaManuencao(char *nome, char *estado, char *local){
  * @brief Lê da entrada padrão um  ticket do TIPO Manutencao
  * @return  Um chamado do Tipo Manutencao
  */
-Manutencao *lerManutencao(){
+Manutencao *lerManutencao(char *setor){
     char nome[MAX_TAM_NOME_MANUTENCAO];
     char estado[MAX_TAM_ESTADO];
     char local[MAX_TAM_LOCAL];
@@ -50,6 +50,8 @@ Manutencao *lerManutencao(){
     scanf("%[^\n]\n", local);
     
     Manutencao *m = criaManuencao(nome, estado, local);
+
+    strcpy(m->setor, setor);
 
     m->tempo = setTempoEstimadoManutencao(m);
     return m;

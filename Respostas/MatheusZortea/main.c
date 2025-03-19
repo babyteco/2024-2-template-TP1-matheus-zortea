@@ -15,7 +15,7 @@
 
 
 int main(){
-
+    //printf("COMECOU PORRA\n");
     ListaTecnicos *lt = criaListaTecnicos();
     ListaUsuarios *lu = criaListaUsuarios();
     Fila *f = criaFila();
@@ -46,7 +46,9 @@ int main(){
         scanf("%c\n", &operacao);
     }
     
-    
+    desalocaFila(f);
+    desalocaListaTecnicos(lt);
+    desalocaListaUsuarios(lu);
 
 
     

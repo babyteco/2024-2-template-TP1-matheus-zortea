@@ -26,7 +26,7 @@ Manutencao *criaManuencao(char *nome, char *estado, char *local);
  * @brief Lê da entrada padrão um  ticket do TIPO Manutencao
  * @return  Um chamado do Tipo Manutencao
  */
-Manutencao *lerManutencao();
+Manutencao *lerManutencao(char *setor);
 
 /**
  * @brief  Calcula o tempo estimado para resolver um ticket do tipo Manutencao.

@@ -63,9 +63,29 @@ void desalocaUsuario(Usuario *u){
 int getTicketsSolicitados(Usuario *u){
     return u->qtdTickets;
 }
+    
+char *getNomeUsuario(Usuario *u){
+    return u->nome;
+}
 
 char *getCpfUsuario(Usuario *u){
     return u->cpf;
+}
+
+Data *getNascimentoUsuario(Usuario *u){
+    return u->nascimento;
+}
+
+char *getTelefoneUsuario(Usuario *u){
+    return u->telefone;
+}
+
+char *getGeneroUsuario(Usuario *u){
+    return u->genero;
+}
+
+char *getSetorUsuario(Usuario *u){
+    return u->setor;
 }
 
 void AcrescentaTicketUsuario(Usuario *u){

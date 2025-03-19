@@ -1,49 +1,93 @@
-==129243== Memcheck, a memory error detector
-==129243== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==129243== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==129243== Command: Resultados/MatheusZortea/main/prog Resultados/MatheusZortea/main/Casos/6
-==129243== Parent PID: 129242
-==129243== 
-==129243== Invalid write of size 8
-==129243==    at 0x109D20: insereUsuarioLista (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==129243==    by 0x109FC8: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==129243==  Address 0x4a4aa60 is 0 bytes after a block of size 16 alloc'd
-==129243==    at 0x483DFAF: realloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
-==129243==    by 0x109CEC: insereUsuarioLista (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==129243==    by 0x109FC8: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==129243== 
---129243-- VALGRIND INTERNAL ERROR: Valgrind received a signal 11 (SIGSEGV) - exiting
---129243-- si_code=1;  Faulting address: 0x9496168;  sp: 0x1002ca9e40
-
-valgrind: the 'impossible' happened:
-   Killed by fatal signal
-
-host stacktrace:
-==129243==    at 0x5805160F: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
-==129243==    by 0x58005BF7: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
-==129243==    by 0x580A7204: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
-==129243==    by 0x580F5FD4: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
-
-sched status:
-  running_tid=1
-
-Thread 1: status = VgTs_Runnable (lwpid 129243)
-==129243==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
-==129243==    by 0x10AFF5: LeUsuario (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==129243==    by 0x109FB1: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-client stack range: [0x1FFEFFD000 0x1FFF000FFF] client SP: 0x1FFEFFEEF0
-valgrind stack range: [0x1002BAA000 0x1002CA9FFF] top usage: 18696 of 1048576
-
-
-Note: see also the FAQ in the source distribution.
-It contains workarounds to several common problems.
-In particular, if Valgrind aborted or crashed after
-identifying problems in your program, there's a good chance
-that fixing those problems will prevent Valgrind aborting or
-crashing, especially if it happened in m_mallocfree.c.
-
-If that doesn't help, please report this bug to: www.valgrind.org
-
-In the bug report, send all the above text, the valgrind
-version, and what OS and version you are using.  Thanks.
-
+==126297== Memcheck, a memory error detector
+==126297== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==126297== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==126297== Command: Resultados/MatheusZortea/main/prog Resultados/MatheusZortea/main/Casos/6
+==126297== Parent PID: 126296
+==126297== 
+==126297== Conditional jump or move depends on uninitialised value(s)
+==126297==    at 0x48CB958: __vfprintf_internal (vfprintf-internal.c:1687)
+==126297==    by 0x48B5D3E: printf (printf.c:33)
+==126297==    by 0x10B732: notificaUsuario (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297==    by 0x10A2DF: notificaListaUsuarios (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297==    by 0x10977D: RealizaAcao (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297==    by 0x10A46F: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297== 
+==126297== Use of uninitialised value of size 8
+==126297==    at 0x48AF69B: _itoa_word (_itoa.c:179)
+==126297==    by 0x48CB574: __vfprintf_internal (vfprintf-internal.c:1687)
+==126297==    by 0x48B5D3E: printf (printf.c:33)
+==126297==    by 0x10B732: notificaUsuario (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297==    by 0x10A2DF: notificaListaUsuarios (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297==    by 0x10977D: RealizaAcao (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297==    by 0x10A46F: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297== 
+==126297== Conditional jump or move depends on uninitialised value(s)
+==126297==    at 0x48AF6AD: _itoa_word (_itoa.c:179)
+==126297==    by 0x48CB574: __vfprintf_internal (vfprintf-internal.c:1687)
+==126297==    by 0x48B5D3E: printf (printf.c:33)
+==126297==    by 0x10B732: notificaUsuario (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297==    by 0x10A2DF: notificaListaUsuarios (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297==    by 0x10977D: RealizaAcao (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297==    by 0x10A46F: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297== 
+==126297== Conditional jump or move depends on uninitialised value(s)
+==126297==    at 0x48CC228: __vfprintf_internal (vfprintf-internal.c:1687)
+==126297==    by 0x48B5D3E: printf (printf.c:33)
+==126297==    by 0x10B732: notificaUsuario (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297==    by 0x10A2DF: notificaListaUsuarios (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297==    by 0x10977D: RealizaAcao (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297==    by 0x10A46F: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297== 
+==126297== Conditional jump or move depends on uninitialised value(s)
+==126297==    at 0x48CB6EE: __vfprintf_internal (vfprintf-internal.c:1687)
+==126297==    by 0x48B5D3E: printf (printf.c:33)
+==126297==    by 0x10B732: notificaUsuario (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297==    by 0x10A2DF: notificaListaUsuarios (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297==    by 0x10977D: RealizaAcao (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297==    by 0x10A46F: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297== 
+==126297== 
+==126297== HEAP SUMMARY:
+==126297==     in use at exit: 1,952 bytes in 38 blocks
+==126297==   total heap usage: 85 allocs, 47 frees, 15,276 bytes allocated
+==126297== 
+==126297== 48 bytes in 4 blocks are definitely lost in loss record 1 of 7
+==126297==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==126297==    by 0x10929E: InicializaData (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297==    by 0x10ADBA: CriaTecnico (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297==    by 0x10AF9F: LeTecnico (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297==    by 0x10A3F5: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297== 
+==126297== 96 bytes in 8 blocks are definitely lost in loss record 4 of 7
+==126297==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==126297==    by 0x10929E: InicializaData (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297==    by 0x10B4BB: LeUsuario (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297==    by 0x10A41E: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297== 
+==126297== 96 bytes in 8 blocks are definitely lost in loss record 5 of 7
+==126297==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==126297==    by 0x10929E: InicializaData (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297==    by 0x10B3F7: CriaUsuario (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297==    by 0x10A07C: CopiaListaUsuarios (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297==    by 0x10A0D1: RankingUsuario (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297==    by 0x1097D6: RealizaAcao (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297==    by 0x10A46F: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297== 
+==126297== 1,712 (16 direct, 1,696 indirect) bytes in 1 blocks are definitely lost in loss record 7 of 7
+==126297==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==126297==    by 0x109D4B: criaListaUsuarios (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297==    by 0x109FD2: CopiaListaUsuarios (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297==    by 0x10A0D1: RankingUsuario (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297==    by 0x1097D6: RealizaAcao (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297==    by 0x10A46F: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
+==126297== 
+==126297== LEAK SUMMARY:
+==126297==    definitely lost: 256 bytes in 21 blocks
+==126297==    indirectly lost: 1,696 bytes in 17 blocks
+==126297==      possibly lost: 0 bytes in 0 blocks
+==126297==    still reachable: 0 bytes in 0 blocks
+==126297==         suppressed: 0 bytes in 0 blocks
+==126297== 
+==126297== Use --track-origins=yes to see where uninitialised values come from
+==126297== For lists of detected and suppressed errors, rerun with: -s
+==126297== ERROR SUMMARY: 44 errors from 9 contexts (suppressed: 0 from 0)

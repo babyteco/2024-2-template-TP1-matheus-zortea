@@ -3,11 +3,11 @@ Pastas Compiladas Corretamente: 5 de 5
 Pastas Linkadas Corretamente: 5 de 5
 Teste main
   - Resultados corretos: 1 de 8
-  - Valgrinds corretos: 5 de 8
+  - Valgrinds corretos: 0 de 8
 Nota de MatheusZortea para o teste main: .45
 Teste completo
   - Resultados corretos: 1 de 8
-  - Valgrinds corretos: 5 de 8
+  - Valgrinds corretos: 0 de 8
 Nota de MatheusZortea para o teste completo: 0
 Teste fila
   - Resultados corretos: 8 de 8
