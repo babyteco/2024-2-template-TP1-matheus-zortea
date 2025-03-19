@@ -12,11 +12,27 @@ Tecnico *CriaTecnico(char *nome, char *cpf, Data *d, char *telefone, char *gener
 
 Tecnico *LeTecnico();
 
-int getDispTempo(Tecnico *t);
+int getDispTempoTecnico(Tecnico *t);
 
-char *getAtuacao(Tecnico *t);
+char *getCpfTecnico(Tecnico *t);
 
-char *getCpf(Tecnico *t);
+char *getNomeTecnico(Tecnico *t);
+
+char *getTelefoneTecnico(Tecnico *t);
+
+char *getGeneroTecnico(Tecnico *t);
+
+char *getAtuacaoTecnico(Tecnico *t);
+
+int getSalarioTecnico(Tecnico *t);
+
+int getSalarioTecnico(Tecnico *t);
+
+Data *getNascimentoTecnico(Tecnico *t);
+
+int getTempoTrabalhadoTecnico(Tecnico *t);
+
+void AtualizaTempoTrabalhadoTecnico(Tecnico *original, Tecnico *novo);
 
 void modificaHorasTecnico(Tecnico *t, int qtdHoras);
 

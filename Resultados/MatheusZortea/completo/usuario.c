@@ -88,8 +88,12 @@ char *getSetorUsuario(Usuario *u){
     return u->setor;
 }
 
+void AtualizaQtdTickets(Usuario *antigo, Usuario *novo){
+    novo->qtdTickets = antigo->qtdTickets;
+}
+
 void AcrescentaTicketUsuario(Usuario *u){
-    u->qtdTickets++;
+    u->qtdTickets = u->qtdTickets + 1;
 }
 
 void notificaUsuario(Usuario *u){

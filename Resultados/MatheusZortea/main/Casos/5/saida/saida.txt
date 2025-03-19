@@ -30,7 +30,7 @@
 - Telefone: (41)97412-3589
 - Genero: FEMININO
 - Setor: MARKETING
-- Tickets solicitados: 1
+- Tickets solicitados: 2
 --------------------
 - Nome: EKKO NUNES
 - CPF: 468.357.912-35
@@ -46,7 +46,7 @@
 - Telefone: (61)95487-6321
 - Genero: OUTROS
 - Setor: RH
-- Tickets solicitados: 0
+- Tickets solicitados: 1
 --------------------
 - Nome: MORDEKAISER MARTINS
 - CPF: 791.680.245-68

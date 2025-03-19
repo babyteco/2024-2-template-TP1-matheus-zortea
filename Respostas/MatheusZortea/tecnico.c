@@ -72,16 +72,44 @@ void desalocaTecnico(Tecnico *t){
     free(t);
 }
 
-int getDispTempo(Tecnico *t){
+int getDispTempoTecnico(Tecnico *t){
     return t->dispTempo;
 }
 
-char *getAtuacao(Tecnico *t){
+char *getAtuacaoTecnico(Tecnico *t){
     return t->atuacao;
 }
 
-char *getCpf(Tecnico *t){
+char *getCpfTecnico(Tecnico *t){
     return t->cpf;
+}
+
+char *getNomeTecnico(Tecnico *t){
+    return t->nome;
+}
+
+char *getTelefoneTecnico(Tecnico *t){
+    return t->telefone;
+}
+
+char *getGeneroTecnico(Tecnico *t){
+    return t->genero;
+}
+
+int getSalarioTecnico(Tecnico *t){
+    return t->salario;
+}
+
+Data *getNascimentoTecnico(Tecnico *t){
+    return t->nascimento;
+}
+
+int getTempoTrabalhadoTecnico(Tecnico *t){
+    return t->tempoTrabalhado;
+}
+
+void AtualizaTempoTrabalhadoTecnico(Tecnico *original, Tecnico *novo){
+    novo->tempoTrabalhado = original->tempoTrabalhado;
 }
 
 void modificaHorasTecnico(Tecnico *t, int qtdHoras){

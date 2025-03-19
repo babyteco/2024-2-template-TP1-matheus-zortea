@@ -32,6 +32,8 @@ char *getGeneroUsuario(Usuario *u);
 
 char *getSetorUsuario(Usuario *u);
 
+void AtualizaQtdTickets(Usuario *antigo, Usuario *novo);
+
 void AcrescentaTicketUsuario(Usuario *u);
 
 void notificaUsuario(Usuario *u);

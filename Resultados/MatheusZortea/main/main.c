@@ -23,8 +23,8 @@ int main(){
     char operacao;
     scanf("%c\n", &operacao);
 
-    while (operacao != 'F'){
-        
+    
+    while (operacao != 'F'){        
         if (operacao == 'T') {
             Tecnico *t = LeTecnico();
             insereTecnicoLista(lt, t);

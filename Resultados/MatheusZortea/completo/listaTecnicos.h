@@ -20,6 +20,14 @@ Tecnico *getTecnicoNaLista(ListaTecnicos *lt, int i);
 
 void ContabilizaHorasTecnicos(ListaTecnicos *lt, char* cpf, int horas);
 
+void TrocaPosicaoTecnicos(ListaTecnicos *lt, int i);
+
+ListaTecnicos *CopiaListaTecnicos(ListaTecnicos *lt);
+
+void RankingTecnico(ListaTecnicos *lt);
+
 void notificaListaTecnicos(ListaTecnicos *lt);
+
+void notificaRankingTecnicos(ListaTecnicos *lt);
 
 #endif

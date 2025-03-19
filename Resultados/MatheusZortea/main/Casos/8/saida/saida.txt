@@ -45,6 +45,17 @@
 ---------TICKET-----------
 - ID: Tick-1
 - Usuario solicitante: 468.357.912-35
+- Tipo: Outros
+- Descricao: LAMPADA PISCANDO CONSTANTEMENTE NO CORREDOR
+- Local: CORREDOR PRINCIPAL
+- Nivel de Dificuldade: 3
+- Tempo estimado: 3h
+- Status: Aberto
+-------------------------
+
+---------TICKET-----------
+- ID: Tick-2
+- Usuario solicitante: 468.357.912-35
 - Tipo: Manutencao
 - Nome do item: AR CONDICIONADO
 - Estado de conservacao: RUIM
@@ -54,7 +65,7 @@
 -------------------------
 
 ---------TICKET-----------
-- ID: Tick-2
+- ID: Tick-3
 - Usuario solicitante: 791.680.245-68
 - Tipo: Software
 - Nome do software: OUTLOOK
@@ -66,7 +77,7 @@
 -------------------------
 
 ---------TICKET-----------
-- ID: Tick-3
+- ID: Tick-4
 - Usuario solicitante: 246.135.790-13
 - Tipo: Software
 - Nome do software: SISTEMA DE PONTO
@@ -77,4 +88,16 @@
 - Status: Aberto
 -------------------------
 
+---------TICKET-----------
+- ID: Tick-5
+- Usuario solicitante: 680.579.134-57
+- Tipo: Outros
+- Descricao: PORTARIA DESABOU
+- Local: PORTARIA PRINCIPAL
+- Nivel de Dificuldade: 32
+- Tempo estimado: 32h
+- Status: Aberto
+-------------------------
+
 ---------------------------
+

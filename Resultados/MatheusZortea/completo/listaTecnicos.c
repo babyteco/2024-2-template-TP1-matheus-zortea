@@ -26,8 +26,8 @@ ListaTecnicos *criaListaTecnicos(){
 
 void insereTecnicoLista(ListaTecnicos *lt, Tecnico *t){
     if (lt->capacidade == lt->qtdTecnicos){
-        lt->t = (Tecnico**) realloc(lt->t, (lt->capacidade * 2) * sizeof(Tecnico*));
-        lt->capacidade *= 2;
+        lt->t = (Tecnico**) realloc(lt->t, (lt->capacidade + 2) * sizeof(Tecnico*));
+        lt->capacidade += 2;
     }
     
     lt->t[lt->qtdTecnicos] = t;
@@ -53,13 +53,74 @@ Tecnico *getTecnicoNaLista(ListaTecnicos *lt, int i){
 
 void ContabilizaHorasTecnicos(ListaTecnicos *lt, char* cpf, int horas){
     for (int i = 0; i < lt->qtdTecnicos; i++){
-        if (strcmp(getCpf(lt->t[i]), cpf) == 0){
+        if (strcmp(getCpfTecnico(lt->t[i]), cpf) == 0){
             modificaHorasTecnico(lt->t[i], horas);
             break;
         }
     }
 }
 
+void TrocaPosicaoTecnicos(ListaTecnicos *lt, int i){
+    Tecnico *temp = lt->t[i];
+    lt->t[i] = lt->t[i+1];
+    lt->t[i+1] = temp;
+}
+
+ListaTecnicos *CopiaListaTecnicos(ListaTecnicos *lt) {
+
+    ListaTecnicos *novaLista = criaListaTecnicos();
+    int qtdTecnicos = lt->qtdTecnicos;
+
+    // Percorrer a lista original e copiar cada usuário
+    for (int i = 0; i < qtdTecnicos; i++) {
+        Tecnico *tecnicoOriginal = getTecnicoNaLista(lt, i);
+
+         // Criar cópia da Data para evitar problemas de ponteiro
+        Data *novaData = CopiaData(getNascimentoTecnico(tecnicoOriginal));
+
+        // Criar um novo usuário com os mesmos dados
+        Tecnico *novoTecnico = CriaTecnico(
+            getNomeTecnico(tecnicoOriginal),
+            getCpfTecnico(tecnicoOriginal),
+            novaData,
+            getTelefoneTecnico(tecnicoOriginal),
+            getGeneroTecnico(tecnicoOriginal),
+            getAtuacaoTecnico(tecnicoOriginal),
+            getSalarioTecnico(tecnicoOriginal),
+            getDispTempoTecnico(tecnicoOriginal)
+        );
+
+        AtualizaTempoTrabalhadoTecnico(tecnicoOriginal, novoTecnico);
+
+        // Inserir o novo tecnico na nova lista
+        insereTecnicoLista(novaLista, novoTecnico);
+
+    }
+
+    return novaLista;
+}
+
+/*FAZ UMA COPIA DA LISTA DE USUARIOS, ORDENA ELA E IMPRIME*/
+void RankingTecnico(ListaTecnicos *lt) {
+    ListaTecnicos *listaOrdenada = CopiaListaTecnicos(lt);
+
+    //bubble sort para colocar os tecnicos com mais tempo trabalhado primeiros
+    for (int i = 0; i < lt->qtdTecnicos - 1; i++){
+        for (int j = 0; j < lt->qtdTecnicos - i - 1; j++){
+            if (getTempoTrabalhadoTecnico(lt->t[j]) < getTempoTrabalhadoTecnico(lt->t[j+1])) {
+                TrocaPosicaoTecnicos(listaOrdenada, j);
+            }
+            /*SE FOR IGUAL PEGA POR ORDEM ALFABETICA*/
+            else if(getTempoTrabalhadoTecnico(lt->t[j]) == getTempoTrabalhadoTecnico(lt->t[j+1])){
+                if (strcmp(getNomeTecnico(listaOrdenada->t[j+1]), getNomeTecnico(listaOrdenada->t[j])) < 0){
+                    TrocaPosicaoTecnicos(listaOrdenada, j);
+                }
+            }    
+        }    
+    }
+
+    notificaRankingTecnicos(listaOrdenada);
+}
 
 void notificaListaTecnicos(ListaTecnicos *lt){
     printf("----- BANCO DE TECNICOS -----\n");
@@ -68,5 +129,15 @@ void notificaListaTecnicos(ListaTecnicos *lt){
         notificaTecnico(lt->t[i]);
     }
     printf("----------------------------\n");
+    printf("\n");
+}
+
+void notificaRankingTecnicos(ListaTecnicos *lt){
+    printf("----- RANKING DE TECNICOS -----\n");
+    for (int i = 0; i < lt->qtdTecnicos; i++){
+        printf("--------------------\n");
+        notificaTecnico(lt->t[i]);     
+    }
+    printf("-------------------------------\n");
     printf("\n");
 }

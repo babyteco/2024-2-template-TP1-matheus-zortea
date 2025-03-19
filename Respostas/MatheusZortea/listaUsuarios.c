@@ -26,8 +26,8 @@ ListaUsuarios *criaListaUsuarios(){
 
 void insereUsuarioLista(ListaUsuarios *lu, Usuario *u){
     if (lu->capacidade == lu->qtdUsuarios){
-        lu->u = (Usuario**) realloc(lu->u, (lu->capacidade * 2) * sizeof(Usuario*));
-        lu->capacidade *= 2;
+        lu->u = (Usuario**) realloc(lu->u, (lu->capacidade + 2) * sizeof(Usuario*));
+        lu->capacidade += 2;
     }
     
     lu->u[lu->qtdUsuarios] = u;
@@ -95,6 +95,8 @@ ListaUsuarios *CopiaListaUsuarios(ListaUsuarios *lu) {
             getSetorUsuario(usuarioOriginal)
         );
 
+        AtualizaQtdTickets(usuarioOriginal, novoUsuario);
+
         // Inserir o novo usuário na nova lista
         insereUsuarioLista(novaLista, novoUsuario);
     }
@@ -124,12 +126,6 @@ void RankingUsuario(ListaUsuarios *lu) {
     notificaRankingUsuarios(listaOrdenada);
 }
 
-void ContabilizaTicketUsuario(ListaUsuarios *lu, char* cpf){
-    int flag = comparaCPF(lu, cpf);
-    if (flag != 0){
-        AcrescentaTicketUsuario(lu->u[flag]);    
-    }
-}
 
 /**
  * @brief A função notificaFila imprime todos os tickets na Fila f

@@ -21,7 +21,7 @@
 void RealizaAcao(Fila *f, ListaUsuarios *lu, ListaTecnicos *lt){
     char acao[MAX_TAM_ACAO];
     scanf("%[^\n]\n", acao);
-    
+
     if (strcmp(acao, "DISTRIBUI") == 0) {
         /* code */
     } 
@@ -30,6 +30,7 @@ void RealizaAcao(Fila *f, ListaUsuarios *lu, ListaTecnicos *lt){
         printf("----- FILA DE TICKETS -----\n");
         notificaFila(f);
         printf("---------------------------\n");
+        printf("\n");
     }
     
     if (strcmp(acao, "USUARIOS") == 0) {
@@ -41,7 +42,7 @@ void RealizaAcao(Fila *f, ListaUsuarios *lu, ListaTecnicos *lt){
     }
     
     if (strcmp(acao, "RANKING TECNICOS") == 0) {
-        /* code */
+        RankingTecnico(lt);
     }
     
     if (strcmp(acao, "RANKING USUARIOS") == 0) {
@@ -63,44 +64,53 @@ void LeCadastraTicket(Fila *f, ListaUsuarios *lu){
     scanf("%[^\n]\n", cpf);
     scanf("%[^\n]\n", tipo);
 
-    if (strcmp(tipo, "MANUTENCAO") == 0) {
-        
-        //passar o setor para o lemanutencao, para ele calcular as horas estimadas
-        int flag = comparaCPF(lu, cpf);
-        Manutencao *m;
-        if (flag != 0) {
-            if (flag != -1) {
-                m = lerManutencao(getSetorUsuario(getUsuarioNaLista(lu, flag)));
-            } else {
-                m = lerManutencao(getSetorUsuario(getUsuarioNaLista(lu, 0)));
-            }
-        }
+    int flag = comparaCPF(lu, cpf);
 
-        if(comparaCPF(lu, cpf) != 0) {
+    if (strcmp(tipo, "MANUTENCAO") == 0) {
+        //passar o setor para o lemanutencao, para ele calcular as horas estimadas
+        Manutencao *m;
+
+        if ((flag != -1) && (flag != 0)) {
+            m = lerManutencao(getSetorUsuario(getUsuarioNaLista(lu, flag)));
             insereTicketFila(f, cpf, m, getTempoEstimadoManutencao, getTipoManutencao, notificaManutencao, desalocaManutencao);
-            ContabilizaTicketUsuario(lu, cpf);
-        } else {
+            AcrescentaTicketUsuario(getUsuarioNaLista(lu, flag));
+        } else  if (flag == -1){
+            m = lerManutencao(getSetorUsuario(getUsuarioNaLista(lu, 0)));
+            insereTicketFila(f, cpf, m, getTempoEstimadoManutencao, getTipoManutencao, notificaManutencao, desalocaManutencao);
+            AcrescentaTicketUsuario(getUsuarioNaLista(lu, 0));
+        } else if(flag == 0){
+            m = lerManutencao(getSetorUsuario(getUsuarioNaLista(lu, 0)));
             desalocaManutencao(m);
         }
+
     }
 
     if (strcmp(tipo, "OUTROS") == 0) {  
         Outros *o = lerOutros();
         
-        if (comparaCPF(lu, cpf) == 1) {
+        if (flag != 0) {
             insereTicketFila(f, cpf, o, getTempoEstimadoOutros, getTipoOutros, notificaOutros, desalocaOutros);
-            ContabilizaTicketUsuario(lu, cpf);
+            if(flag == -1){
+                AcrescentaTicketUsuario(getUsuarioNaLista(lu, 0));
+            } else {
+                AcrescentaTicketUsuario(getUsuarioNaLista(lu, flag));
+            }
         } else {
             desalocaOutros(o);
         }
     }
 
     if (strcmp(tipo, "SOFTWARE") == 0) {
+
         Software *s = lerSoftware();
         
-        if (comparaCPF(lu, cpf) != 0) {
+        if (flag != 0) {
             insereTicketFila(f, cpf, s, getTempoEstimadoSoftware, getTipoSoftware, notificaSoftware, desalocaSoftware);
-            ContabilizaTicketUsuario(lu, cpf);
+            if(flag == -1){
+                AcrescentaTicketUsuario(getUsuarioNaLista(lu, 0));
+            } else {
+                AcrescentaTicketUsuario(getUsuarioNaLista(lu, flag));
+            }
         } else {
             desalocaSoftware(s);
         } 

@@ -27,8 +27,6 @@ ListaUsuarios *CopiaListaUsuarios(ListaUsuarios *lu);
 
 void RankingUsuario(ListaUsuarios *lu);
 
-void ContabilizaTicketUsuario(ListaUsuarios *lu, char* cpf);
-
 void notificaListaUsuarios(ListaUsuarios *lu);
 
 void notificaRankingUsuarios(ListaUsuarios *lu);
