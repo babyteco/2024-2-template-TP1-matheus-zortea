@@ -20,6 +20,14 @@ Data* InicializaData(){
     return d;
 }
 
+Data* CriaData(int dia, int mes, int ano){
+    Data *d = (Data*) malloc(sizeof(Data));
+    d->dia = dia;
+    d->mes = mes;
+    d->ano = ano;
+    return d;
+}
+
 /*
 Cria e le uma data
 Retorna um ponteiro para data
@@ -63,6 +71,18 @@ Data *CopiaData(Data *d){
     novadata->mes = d->mes;   
     novadata->ano = d->ano;   
     return novadata;
+}
+
+int DifAnosData(Data *d, Data *atual) {
+    int diferenca = atual->ano - d->ano;
+
+    // Se o mês da data atual for menor que o mês da data d, ou se for o mesmo mês,
+    // mas o dia da data atual for anterior ao dia da data d, subtrai 1 da diferença
+    if (atual->mes < d->mes || (atual->mes == d->mes && atual->dia < d->dia)) {
+        diferenca--;
+    }
+
+    return diferenca;
 }
 
 /*

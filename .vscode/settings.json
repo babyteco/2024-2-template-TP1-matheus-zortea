@@ -2,6 +2,8 @@
     "files.associations": {
         "stdlib.h": "c",
         "random": "c",
-        "ticket.h": "c"
+        "ticket.h": "c",
+        "data.h": "c",
+        "tecnico.h": "c"
     }
 }

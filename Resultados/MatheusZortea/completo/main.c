@@ -15,7 +15,6 @@
 
 
 int main(){
-    //printf("COMECOU PORRA\n");
     ListaTecnicos *lt = criaListaTecnicos();
     ListaUsuarios *lu = criaListaUsuarios();
     Fila *f = criaFila();
@@ -49,7 +48,6 @@ int main(){
     desalocaFila(f);
     desalocaListaTecnicos(lt);
     desalocaListaUsuarios(lu);
-
 
     
     return 0;

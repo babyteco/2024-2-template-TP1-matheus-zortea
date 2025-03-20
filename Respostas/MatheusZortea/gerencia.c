@@ -23,7 +23,7 @@ void RealizaAcao(Fila *f, ListaUsuarios *lu, ListaTecnicos *lt){
     scanf("%[^\n]\n", acao);
 
     if (strcmp(acao, "DISTRIBUI") == 0) {
-        /* code */
+        distribuiTicketsFila(f, lt);
     } 
     
     if (strcmp(acao, "NOTIFICA") == 0) {
@@ -50,13 +50,78 @@ void RealizaAcao(Fila *f, ListaUsuarios *lu, ListaTecnicos *lt){
     }
     
     if (strcmp(acao, "RELATORIO") == 0) {
-        /* code */
-    }
-    
+        GeraRelatorio(f, lt, lu);
+    }   
 }
 
+void distribuiTicketsFila(Fila *f, ListaTecnicos *lt){
 
+    int qtdTickets = getQtdTicketsNaFila(f);
+    int qtdTecnicos = getQtdTecnicosCadastrados(lt);
+    int indiceTecnico = 0;
+        
+    for (int i = 0; i < qtdTickets; i++) {
 
+        Ticket *ticket = getTicketNaFila(f, i);
+
+        if (getStatusTicket(ticket) == 'F') {
+
+            continue;
+        }
+        
+        int encontrouTecnico = 0;
+        
+        for (int j = 0; j < qtdTecnicos; j++) {
+
+            int idx = (indiceTecnico + j) % qtdTecnicos;
+
+            Tecnico *tecnico = getTecnicoNaLista(lt, idx);
+        
+            //Se o tecnico for do mesmo tipo do ticket
+            if ((getTipoTicket(ticket) == 'S' && strcmp(getAtuacaoTecnico(tecnico), "TI") == 0) ||
+                ((getTipoTicket(ticket) != 'S') && strcmp(getAtuacaoTecnico(tecnico), "TI") != 0)) {
+    
+                //se o tecnico tiver tempo para o ticket    
+                if (getTempoEstimadoTicket(ticket) <= getDispTempoTecnico(tecnico)) {
+                       
+                    int tempoTicket = getTempoEstimadoTicket(ticket);
+                    
+                    modificaHorasTecnico(tecnico, tempoTicket);
+                    finalizaTicket(ticket);
+                    indiceTecnico = (idx + 1) % qtdTecnicos;
+                    encontrouTecnico = 1;
+                    break;
+                }
+            }
+        }
+    
+        
+        if (encontrouTecnico == 0) {
+            continue;
+        }
+    }
+}
+
+void GeraRelatorio(Fila *f, ListaTecnicos *lt, ListaUsuarios *lu){
+    int TicsAbertos = getQtdTicketsPorStatusNaFila(f, 'A');
+    int TicsFechados = getQtdTicketsPorStatusNaFila(f, 'F');
+    int mediaIdadeUsuarios = MediaIdadeUsuarios(lu);
+    int mediaIdadeTecnicos = MediaIdadeTecnicos(lt);
+    int mediaTempoTrabalhado = MediaTempoTrabalhadoTecnicos(lt);
+
+    printf("----- RELATORIO GERAL -----\n");
+    printf("- Qtd tickets: %d\n", getQtdTicketsNaFila(f));
+    printf("- Qtd tickets (A): %d\n", TicsAbertos);
+    printf("- Qtd tickets (F): %d\n", TicsFechados);
+    printf("- Qtd usuarios: %d\n", getQtdUsuariosCadastrados(lu));
+    printf("- Md idade usuarios: %d\n", mediaIdadeUsuarios);
+    printf("- Qtd tecnicos: %d\n", getQtdTecnicosCadastrados(lt));
+    printf("- Md idade tecnicos: %d\n", mediaIdadeTecnicos);
+    printf("- Md trabalho tecnicos: %d\n", mediaTempoTrabalhado);
+    printf("---------------------------\n\n");
+}
+
+//botar no arquivo ticket
 void LeCadastraTicket(Fila *f, ListaUsuarios *lu){
     char cpf[MAX_TAM_CPF];
     char tipo[MAX_TAM_TIPO];

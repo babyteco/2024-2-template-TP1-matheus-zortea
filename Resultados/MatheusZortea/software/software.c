@@ -118,5 +118,6 @@ void notificaSoftware(void *dado){
     printf("- Categoria: %s\n", a->categoria);
     printf("- Nível do impacto: %d\n", a->impacto);
     printf("- Motivo: %s\n", a->motivo);
+    setTempoEstimadoSoftware(a);
     printf("- Tempo estimado: %dh\n", a->tempo);
 }

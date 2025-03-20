@@ -18,4 +18,8 @@ void LeCadastraTicket(Fila *f, ListaUsuarios *lu);
 
 void RealizaAcao(Fila *f, ListaUsuarios *lu, ListaTecnicos *lt);
 
+void GeraRelatorio(Fila *f, ListaTecnicos *lt, ListaUsuarios *lu);
+
+void distribuiTicketsFila(Fila *f, ListaTecnicos *lt);
+
 #endif

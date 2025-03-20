@@ -31,4 +31,6 @@ void notificaListaUsuarios(ListaUsuarios *lu);
 
 void notificaRankingUsuarios(ListaUsuarios *lu);
 
+int MediaIdadeUsuarios(ListaUsuarios *lu);
+
 #endif

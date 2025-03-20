@@ -30,4 +30,8 @@ void notificaListaTecnicos(ListaTecnicos *lt);
 
 void notificaRankingTecnicos(ListaTecnicos *lt);
 
+int MediaIdadeTecnicos(ListaTecnicos *lt);
+
+int MediaTempoTrabalhadoTecnicos(ListaTecnicos *lt);
+
 #endif

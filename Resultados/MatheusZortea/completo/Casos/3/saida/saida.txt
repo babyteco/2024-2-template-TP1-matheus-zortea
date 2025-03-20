@@ -25,8 +25,8 @@
 - Descricao: RECOLHER COBRA QUE APARECEU NA ENTRADA DO PREDIO
 - Local: PASSARELA DA INFORMATICA
 - Nivel de Dificuldade: 5
-- Tempo estimado: 5h
-- Status: Aberto
+- Tempo Estimado: 5h
+- Status: Finalizado
 -------------------------
 
 ---------TICKET-----------
@@ -36,8 +36,8 @@
 - Descricao: UM GAMBA MORREU NO TETO DO PREDIO E PRECISAMOS DE APOIO
 - Local: TETO DO CT-7
 - Nivel de Dificuldade: 5
-- Tempo estimado: 5h
-- Status: Aberto
+- Tempo Estimado: 5h
+- Status: Finalizado
 -------------------------
 
 ---------TICKET-----------
@@ -48,7 +48,7 @@
 - Estado de conservacao: RUIM
 - Local: SALA 22 CT-7
 - Tempo estimado: 6h
-- Status: Aberto
+- Status: Finalizado
 -------------------------
 
 ---------TICKET-----------
@@ -60,22 +60,12 @@
 - Nível do impacto: 2
 - Motivo: NAO CONSIGO ORDENAR COLUNA DE DADOS
 - Tempo estimado: 3h
-- Status: Aberto
+- Status: Finalizado
 -------------------------
 
 ---------------------------
 
 ----- RANKING DE TECNICOS -----
---------------------
-- Nome: DR. MUNDO
-- CPF: 564.587.965-85
-- Data de Nascimento: 15/5/1988
-- Telefone: (34)98761-2345
-- Genero: OUTROS
-- Area de Atuacao: TI
-- Salario: 4200.00
-- Disponibilidade: 10h
-- Tempo Trabalhado: 0h
 --------------------
 - Nome: HEIMERDINGER GARCIA
 - CPF: 456.987.123-96
@@ -84,8 +74,8 @@
 - Genero: MASCULINO
 - Area de Atuacao: GERAL
 - Salario: 3500.00
-- Disponibilidade: 20h
-- Tempo Trabalhado: 0h
+- Disponibilidade: 9h
+- Tempo Trabalhado: 11h
 --------------------
 - Nome: JAYCE BARBOSA
 - CPF: 854.632.894-20
@@ -94,7 +84,28 @@
 - Genero: MASCULINO
 - Area de Atuacao: GERAL
 - Salario: 2000.00
+- Disponibilidade: 2h
+- Tempo Trabalhado: 5h
+--------------------
+- Nome: DR. MUNDO
+- CPF: 564.587.965-85
+- Data de Nascimento: 15/5/1988
+- Telefone: (34)98761-2345
+- Genero: OUTROS
+- Area de Atuacao: TI
+- Salario: 4200.00
 - Disponibilidade: 7h
-- Tempo Trabalhado: 0h
+- Tempo Trabalhado: 3h
 -------------------------------
+
+----- RELATORIO GERAL -----
+- Qtd tickets: 4
+- Qtd tickets (A): 0
+- Qtd tickets (F): 4
+- Qtd usuarios: 4
+- Md idade usuarios: 39
+- Qtd tecnicos: 3
+- Md idade tecnicos: 49
+- Md trabalho tecnicos: 6
+---------------------------
 

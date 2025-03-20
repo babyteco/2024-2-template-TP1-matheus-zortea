@@ -24,16 +24,21 @@ ListaUsuarios *criaListaUsuarios(){
 }
 
 
+
+    
 void insereUsuarioLista(ListaUsuarios *lu, Usuario *u){
-    if (lu->capacidade == lu->qtdUsuarios){
+   if (lu->capacidade == lu->qtdUsuarios){
         lu->u = (Usuario**) realloc(lu->u, (lu->capacidade + 2) * sizeof(Usuario*));
         lu->capacidade += 2;
     }
-    
-    lu->u[lu->qtdUsuarios] = u;
-    
-    lu->qtdUsuarios++;
-}
+        
+    int flag = comparaCPF(lu, getCpfUsuario(u));
+       
+    if (flag == 0){
+        lu->u[lu->qtdUsuarios] = u;
+        lu->qtdUsuarios++;
+    }
+}    
 
 void desalocaListaUsuarios(ListaUsuarios *lu){
     for (int i = 0; i < lu->qtdUsuarios; i++){
@@ -149,4 +154,17 @@ void notificaRankingUsuarios(ListaUsuarios *lu){
     }
     printf("-------------------------------\n");
     printf("\n");
+}
+
+int MediaIdadeUsuarios(ListaUsuarios *lu){
+    //18/02/2025 dia do trabalho
+    Data *d = CriaData(18, 2, 2025);
+    int somaIdades = 0;
+    for (int i = 0; i < lu->qtdUsuarios; i++){
+        somaIdades = somaIdades + DifAnosData(getNascimentoUsuario(lu->u[i]), d);
+    }
+    somaIdades = somaIdades / lu->qtdUsuarios;
+    
+    DesalocaData(d);
+    return somaIdades;
 }

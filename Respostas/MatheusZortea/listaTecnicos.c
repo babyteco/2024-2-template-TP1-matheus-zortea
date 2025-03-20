@@ -107,11 +107,11 @@ void RankingTecnico(ListaTecnicos *lt) {
     //bubble sort para colocar os tecnicos com mais tempo trabalhado primeiros
     for (int i = 0; i < lt->qtdTecnicos - 1; i++){
         for (int j = 0; j < lt->qtdTecnicos - i - 1; j++){
-            if (getTempoTrabalhadoTecnico(lt->t[j]) < getTempoTrabalhadoTecnico(lt->t[j+1])) {
+            if (getTempoTrabalhadoTecnico(listaOrdenada->t[j]) < getTempoTrabalhadoTecnico(listaOrdenada->t[j+1])) {
                 TrocaPosicaoTecnicos(listaOrdenada, j);
             }
             /*SE FOR IGUAL PEGA POR ORDEM ALFABETICA*/
-            else if(getTempoTrabalhadoTecnico(lt->t[j]) == getTempoTrabalhadoTecnico(lt->t[j+1])){
+            else if(getTempoTrabalhadoTecnico(listaOrdenada->t[j]) == getTempoTrabalhadoTecnico(listaOrdenada->t[j+1])){
                 if (strcmp(getNomeTecnico(listaOrdenada->t[j+1]), getNomeTecnico(listaOrdenada->t[j])) < 0){
                     TrocaPosicaoTecnicos(listaOrdenada, j);
                 }
@@ -140,4 +140,27 @@ void notificaRankingTecnicos(ListaTecnicos *lt){
     }
     printf("-------------------------------\n");
     printf("\n");
+}
+
+int MediaIdadeTecnicos(ListaTecnicos *lt){
+    //18/02/2025 dia do trabalho
+    Data *d = CriaData(18, 2, 2025);
+    int somaIdades = 0;
+    for (int i = 0; i < lt->qtdTecnicos; i++){
+        somaIdades = somaIdades + DifAnosData(getNascimentoTecnico(lt->t[i]), d);
+    }
+    somaIdades = somaIdades / lt->qtdTecnicos;
+    
+    DesalocaData(d);
+    return somaIdades;
+}
+
+int MediaTempoTrabalhadoTecnicos(ListaTecnicos *lt){
+    int somaTempo = 0;
+    for (int i = 0; i < lt->qtdTecnicos; i++){
+        somaTempo = somaTempo + getTempoTrabalhadoTecnico(lt->t[i]);
+    }
+    somaTempo = somaTempo / lt->qtdTecnicos;
+    
+    return somaTempo;
 }

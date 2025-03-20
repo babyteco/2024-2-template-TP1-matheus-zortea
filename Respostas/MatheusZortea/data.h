@@ -11,6 +11,8 @@ retorna o ponteiro para a data inicializada
 */
 Data* InicializaData();
 
+Data* CriaData(int dia, int mes, int ano);
+
 /*
 Le uma data da entrada padrão
 Retorna um ponteiro para data
@@ -24,6 +26,8 @@ Retorna 1 se d1 for mais antiga ou 2 se d2 for mais antiga
 int DiferencaDatas(Data *d1, Data *d2);
 
 Data *CopiaData(Data *d);
+
+int DifAnosData(Data *d, Data *atual);
 
 void ImprimeData(Data *d);
 
