@@ -117,7 +117,7 @@
 - Categoria: BUG
 - Nível do impacto: 4
 - Motivo: EMAILS NAO ESTAO SENDO ENVIADOS
-- Tempo estimado: 0h
+- Tempo estimado: 7h
 - Status: Aberto
 -------------------------
 

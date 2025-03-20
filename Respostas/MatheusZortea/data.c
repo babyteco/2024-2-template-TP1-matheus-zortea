@@ -17,6 +17,9 @@ retorna o ponteiro para a data inicializada
 */
 Data* InicializaData(){
     Data *d = (Data*) malloc(sizeof(Data));
+    d->ano = 0;
+    d->mes = 0;
+    d->dia = 0;
     return d;
 }
 
@@ -33,8 +36,16 @@ Cria e le uma data
 Retorna um ponteiro para data
 */
 Data* LeData(){
-    Data *d = InicializaData();
-    scanf("%d/%d/%d\n",&d->dia, &d->mes, &d->ano);
+    Data *d;
+
+    int dia;
+    int mes;
+    int ano;
+
+    scanf("%d/%d/%d\n",&dia, &mes, &ano);
+
+    d = CriaData(dia, mes, ano);
+
     return d;
 }
 

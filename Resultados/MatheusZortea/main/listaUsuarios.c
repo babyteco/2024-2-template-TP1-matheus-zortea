@@ -37,6 +37,8 @@ void insereUsuarioLista(ListaUsuarios *lu, Usuario *u){
     if (flag == 0){
         lu->u[lu->qtdUsuarios] = u;
         lu->qtdUsuarios++;
+    } else{
+        desalocaUsuario(u);
     }
 }    
 

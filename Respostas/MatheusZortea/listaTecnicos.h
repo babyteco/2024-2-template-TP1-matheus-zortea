@@ -12,6 +12,8 @@ ListaTecnicos *criaListaTecnicos();
 
 void insereTecnicoLista(ListaTecnicos *lt, Tecnico *t);
 
+int comparaCPFTecnicos(ListaTecnicos *lt, char *cpf);
+
 void desalocaListaTecnicos(ListaTecnicos *lt);
 
 int getQtdTecnicosCadastrados(ListaTecnicos *lt);

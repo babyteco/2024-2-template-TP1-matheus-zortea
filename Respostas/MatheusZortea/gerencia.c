@@ -168,7 +168,7 @@ void LeCadastraTicket(Fila *f, ListaUsuarios *lu){
     if (strcmp(tipo, "SOFTWARE") == 0) {
 
         Software *s = lerSoftware();
-        
+        setTempoEstimadoSoftware(s);
         if (flag != 0) {
             insereTicketFila(f, cpf, s, getTempoEstimadoSoftware, getTipoSoftware, notificaSoftware, desalocaSoftware);
             if(flag == -1){

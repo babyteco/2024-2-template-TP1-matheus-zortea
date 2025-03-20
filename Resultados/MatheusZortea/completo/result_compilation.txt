@@ -1,0 +1,7 @@
+usuario.c:8: warning: "MAX_CPF" redefined
+    8 | #define MAX_CPF 25
+      | 
+In file included from usuario.c:4:
+usuario.h:7: note: this is the location of the previous definition
+    7 | #define MAX_CPF 20
+      | 

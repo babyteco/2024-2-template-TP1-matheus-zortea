@@ -29,10 +29,30 @@ void insereTecnicoLista(ListaTecnicos *lt, Tecnico *t){
         lt->t = (Tecnico**) realloc(lt->t, (lt->capacidade + 2) * sizeof(Tecnico*));
         lt->capacidade += 2;
     }
-    
-    lt->t[lt->qtdTecnicos] = t;
 
-    lt->qtdTecnicos++;
+    int flag = comparaCPFTecnicos(lt, getCpfTecnico(t));
+       
+    if (flag == 0){
+        lt->t[lt->qtdTecnicos] = t;
+        lt->qtdTecnicos++;
+    } else {
+        desalocaTecnico(t);
+    }
+}
+
+//retorna i se ele existir, 0 caso contrario, -1 se i=0
+int comparaCPFTecnicos(ListaTecnicos *lt, char *cpf){
+    
+    for (int i = 0; i < lt->qtdTecnicos; i++){
+        if (strcmp(getCpfTecnico(lt->t[i]), cpf) == 0){
+            if (i != 0){
+                return i;
+            } else {
+                return -1;
+            }                
+        }
+    }
+    return 0;
 }
 
 void desalocaListaTecnicos(ListaTecnicos *lt){

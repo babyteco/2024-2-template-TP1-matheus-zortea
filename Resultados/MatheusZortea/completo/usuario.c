@@ -5,7 +5,7 @@
 #include"data.h"
 
 #define MAX_NOME 100
-#define MAX_CPF 20
+#define MAX_CPF 25
 #define MAX_TEL 20
 #define MAX_SETOR 20
 #define MAX_GENERO 20
@@ -26,7 +26,6 @@ Retorna um ponteiro para o usuário inicializado
 */
 Usuario *CriaUsuario(char *nome, char *cpf, Data *d, char *telefone, char *genero, char *setor){
     Usuario *u = (Usuario*) malloc(sizeof(Usuario));
-    u->nascimento = InicializaData();
     strcpy(u->nome, nome);
     strcpy(u->cpf, cpf);
     strcpy(u->telefone, telefone);
@@ -42,15 +41,21 @@ Le as informações do usuário da entrada padrão
 Retorna um ponteiro para o Usuario
 */
 Usuario *LeUsuario(){
-    Usuario *u = (Usuario*) malloc(sizeof(Usuario));
-    u->nascimento = InicializaData();
+
+    char nome[MAX_NOME];
+    char cpf[MAX_CPF];
+    char telefone[MAX_TEL];
+    char genero[MAX_GENERO];
+    char setor[MAX_SETOR];
         
-    scanf("%[^\n]\n", u->nome);
-    scanf("%[^\n]\n", u->cpf);
-    u->nascimento = LeData();
-    scanf("%[^\n]\n", u->telefone);
-    scanf("%[^\n]\n", u->genero);
-    scanf("%[^\n]\n", u->setor);
+    scanf("%[^\n]\n", nome);
+    scanf("%[^\n]\n", cpf);
+    Data *d = LeData();
+    scanf("%[^\n]\n", telefone);
+    scanf("%[^\n]\n", genero);
+    scanf("%[^\n]\n", setor);
+
+    Usuario *u = CriaUsuario(nome, cpf, d, telefone, genero, setor);
 
     return u;
 }

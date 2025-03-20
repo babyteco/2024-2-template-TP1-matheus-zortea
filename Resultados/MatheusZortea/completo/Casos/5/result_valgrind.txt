@@ -1,81 +1,15 @@
-==490060== Memcheck, a memory error detector
-==490060== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==490060== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==490060== Command: Resultados/MatheusZortea/completo/prog Resultados/MatheusZortea/completo/Casos/5
-==490060== Parent PID: 490059
-==490060== 
-==490060== Conditional jump or move depends on uninitialised value(s)
-==490060==    at 0x48CB958: __vfprintf_internal (vfprintf-internal.c:1687)
-==490060==    by 0x48B5D3E: printf (printf.c:33)
-==490060==    by 0x10C2A9: notificaUsuario (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
-==490060==    by 0x10ACB6: notificaListaUsuarios (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
-==490060==    by 0x1098E5: RealizaAcao (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
-==490060==    by 0x10AEE3: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
-==490060== 
-==490060== Use of uninitialised value of size 8
-==490060==    at 0x48AF69B: _itoa_word (_itoa.c:179)
-==490060==    by 0x48CB574: __vfprintf_internal (vfprintf-internal.c:1687)
-==490060==    by 0x48B5D3E: printf (printf.c:33)
-==490060==    by 0x10C2A9: notificaUsuario (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
-==490060==    by 0x10ACB6: notificaListaUsuarios (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
-==490060==    by 0x1098E5: RealizaAcao (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
-==490060==    by 0x10AEE3: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
-==490060== 
-==490060== Conditional jump or move depends on uninitialised value(s)
-==490060==    at 0x48AF6AD: _itoa_word (_itoa.c:179)
-==490060==    by 0x48CB574: __vfprintf_internal (vfprintf-internal.c:1687)
-==490060==    by 0x48B5D3E: printf (printf.c:33)
-==490060==    by 0x10C2A9: notificaUsuario (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
-==490060==    by 0x10ACB6: notificaListaUsuarios (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
-==490060==    by 0x1098E5: RealizaAcao (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
-==490060==    by 0x10AEE3: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
-==490060== 
-==490060== Conditional jump or move depends on uninitialised value(s)
-==490060==    at 0x48CC228: __vfprintf_internal (vfprintf-internal.c:1687)
-==490060==    by 0x48B5D3E: printf (printf.c:33)
-==490060==    by 0x10C2A9: notificaUsuario (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
-==490060==    by 0x10ACB6: notificaListaUsuarios (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
-==490060==    by 0x1098E5: RealizaAcao (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
-==490060==    by 0x10AEE3: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
-==490060== 
-==490060== Conditional jump or move depends on uninitialised value(s)
-==490060==    at 0x48CB6EE: __vfprintf_internal (vfprintf-internal.c:1687)
-==490060==    by 0x48B5D3E: printf (printf.c:33)
-==490060==    by 0x10C2A9: notificaUsuario (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
-==490060==    by 0x10ACB6: notificaListaUsuarios (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
-==490060==    by 0x1098E5: RealizaAcao (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
-==490060==    by 0x10AEE3: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
-==490060== 
-==490060== 
-==490060== HEAP SUMMARY:
-==490060==     in use at exit: 552 bytes in 16 blocks
-==490060==   total heap usage: 60 allocs, 44 frees, 13,660 bytes allocated
-==490060== 
-==490060== 48 bytes in 4 blocks are definitely lost in loss record 2 of 4
-==490060==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
-==490060==    by 0x1092BE: InicializaData (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
-==490060==    by 0x10B851: CriaTecnico (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
-==490060==    by 0x10BA36: LeTecnico (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
-==490060==    by 0x10AE69: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
-==490060== 
-==490060== 96 bytes in 8 blocks are definitely lost in loss record 3 of 4
-==490060==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
-==490060==    by 0x1092BE: InicializaData (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
-==490060==    by 0x10C00B: LeUsuario (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
-==490060==    by 0x10AE92: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
-==490060== 
-==490060== 408 (384 direct, 24 indirect) bytes in 2 blocks are definitely lost in loss record 4 of 4
-==490060==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
-==490060==    by 0x10BFFD: LeUsuario (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
-==490060==    by 0x10AE92: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/completo/prog)
-==490060== 
-==490060== LEAK SUMMARY:
-==490060==    definitely lost: 528 bytes in 14 blocks
-==490060==    indirectly lost: 24 bytes in 2 blocks
-==490060==      possibly lost: 0 bytes in 0 blocks
-==490060==    still reachable: 0 bytes in 0 blocks
-==490060==         suppressed: 0 bytes in 0 blocks
-==490060== 
-==490060== Use --track-origins=yes to see where uninitialised values come from
-==490060== For lists of detected and suppressed errors, rerun with: -s
-==490060== ERROR SUMMARY: 33 errors from 8 contexts (suppressed: 0 from 0)
+==427876== Memcheck, a memory error detector
+==427876== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==427876== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==427876== Command: Resultados/MatheusZortea/completo/prog Resultados/MatheusZortea/completo/Casos/5
+==427876== Parent PID: 427875
+==427876== 
+==427876== 
+==427876== HEAP SUMMARY:
+==427876==     in use at exit: 0 bytes in 0 blocks
+==427876==   total heap usage: 48 allocs, 48 frees, 13,580 bytes allocated
+==427876== 
+==427876== All heap blocks were freed -- no leaks are possible
+==427876== 
+==427876== For lists of detected and suppressed errors, rerun with: -s
+==427876== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

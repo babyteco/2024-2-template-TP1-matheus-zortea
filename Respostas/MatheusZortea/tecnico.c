@@ -28,7 +28,6 @@ Retorna um ponteiro para o usuário inicializado
 */
 Tecnico *CriaTecnico(char *nome, char *cpf, Data *d, char *telefone, char *genero, char *atuacao, int salario, int disptempo){  
     Tecnico *t = (Tecnico*) malloc(sizeof(Tecnico));
-    t->nascimento = InicializaData();
     strcpy(t->nome, nome);
     strcpy(t->cpf, cpf);
     strcpy(t->telefone , telefone);     

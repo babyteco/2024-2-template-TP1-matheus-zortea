@@ -137,8 +137,8 @@
 - Genero: MASCULINO
 - Area de Atuacao: TI
 - Salario: 5200.00
-- Disponibilidade: 40h
-- Tempo Trabalhado: 0h
+- Disponibilidade: 33h
+- Tempo Trabalhado: 7h
 --------------------
 - Nome: GAREN SANTOS
 - CPF: 901.234.567-89
@@ -147,8 +147,8 @@
 - Genero: MASCULINO
 - Area de Atuacao: TI
 - Salario: 4300.00
-- Disponibilidade: 22h
-- Tempo Trabalhado: 0h
+- Disponibilidade: 14h
+- Tempo Trabalhado: 8h
 ----------------------------
 
 ----- FILA DE TICKETS -----
@@ -193,7 +193,7 @@
 - Categoria: BUG
 - Nível do impacto: 4
 - Motivo: EMAILS NAO ESTAO SENDO ENVIADOS
-- Tempo estimado: 0h
+- Tempo estimado: 7h
 - Status: Finalizado
 -------------------------
 
@@ -205,7 +205,7 @@
 - Categoria: BUG
 - Nível do impacto: 5
 - Motivo: SISTEMA DE PONTO MOSTRANDO A HORA ERRADA
-- Tempo estimado: 0h
+- Tempo estimado: 8h
 - Status: Finalizado
 -------------------------
 
