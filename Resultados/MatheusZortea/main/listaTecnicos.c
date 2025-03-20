@@ -140,6 +140,7 @@ void RankingTecnico(ListaTecnicos *lt) {
     }
 
     notificaRankingTecnicos(listaOrdenada);
+    desalocaListaTecnicos(listaOrdenada);
 }
 
 void notificaListaTecnicos(ListaTecnicos *lt){

@@ -131,6 +131,7 @@ void RankingUsuario(ListaUsuarios *lu) {
     }
 
     notificaRankingUsuarios(listaOrdenada);
+    desalocaListaUsuarios(listaOrdenada);
 }
 
 

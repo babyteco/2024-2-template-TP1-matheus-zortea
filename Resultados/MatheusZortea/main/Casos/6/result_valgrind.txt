@@ -1,28 +1,15 @@
-==426980== Memcheck, a memory error detector
-==426980== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==426980== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==426980== Command: Resultados/MatheusZortea/main/prog Resultados/MatheusZortea/main/Casos/6
-==426980== Parent PID: 426979
-==426980== 
-==426980== 
-==426980== HEAP SUMMARY:
-==426980==     in use at exit: 1,776 bytes in 18 blocks
-==426980==   total heap usage: 71 allocs, 53 frees, 15,476 bytes allocated
-==426980== 
-==426980== 1,776 (16 direct, 1,760 indirect) bytes in 1 blocks are definitely lost in loss record 4 of 4
-==426980==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
-==426980==    by 0x10A799: criaListaUsuarios (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==426980==    by 0x10AA56: CopiaListaUsuarios (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==426980==    by 0x10AB68: RankingUsuario (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==426980==    by 0x1098F2: RealizaAcao (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==426980==    by 0x10AF51: main (in /workspaces/2024-2-template-TP1-matheus-zortea/Resultados/MatheusZortea/main/prog)
-==426980== 
-==426980== LEAK SUMMARY:
-==426980==    definitely lost: 16 bytes in 1 blocks
-==426980==    indirectly lost: 1,760 bytes in 17 blocks
-==426980==      possibly lost: 0 bytes in 0 blocks
-==426980==    still reachable: 0 bytes in 0 blocks
-==426980==         suppressed: 0 bytes in 0 blocks
-==426980== 
-==426980== For lists of detected and suppressed errors, rerun with: -s
-==426980== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==67253== Memcheck, a memory error detector
+==67253== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==67253== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==67253== Command: Resultados/MatheusZortea/main/prog Resultados/MatheusZortea/main/Casos/6
+==67253== Parent PID: 67252
+==67253== 
+==67253== 
+==67253== HEAP SUMMARY:
+==67253==     in use at exit: 0 bytes in 0 blocks
+==67253==   total heap usage: 71 allocs, 71 frees, 15,476 bytes allocated
+==67253== 
+==67253== All heap blocks were freed -- no leaks are possible
+==67253== 
+==67253== For lists of detected and suppressed errors, rerun with: -s
+==67253== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
